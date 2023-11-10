@@ -1,0 +1,2 @@
+# mnemonicks
+Training App Mnemonics
