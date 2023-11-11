@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "../../Sytles/TileStyle.css"
 import CornerImage from "./CornerImage";
 
 class Tile extends Component {
@@ -13,7 +14,7 @@ class Tile extends Component {
         return (
             <div className={"Tile"}>
                 <CornerImage/>
-                <h1>This is a Tile</h1>
+                <h1>This is a Tile!</h1>
                 <h2>This is a Subtitle</h2>
                 {/* JSX für die Darstellung der Komponente */}
             </div>

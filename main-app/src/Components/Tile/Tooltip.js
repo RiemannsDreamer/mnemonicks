@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import "../../Sytles/TooltipStyle.css"
 
 class Tooltip extends Component {
     constructor(props) {
@@ -10,7 +11,7 @@ class Tooltip extends Component {
 
     render() {
         return (
-            <div>
+            <div className={"Tooltip"}>
                 <h1>This is a Tooltip</h1>
                 {/* JSX für die Darstellung der Komponente */}
             </div>

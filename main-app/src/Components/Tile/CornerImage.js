@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './MyComponent.css'
+import "../../Sytles/CornerImageStyle.css"
 
 class CornerImage extends Component {
     constructor(props) {
@@ -12,8 +12,9 @@ class CornerImage extends Component {
     render() {
         return (
             <div className={"CornerImage"}>
-                <img src="public/Images/logo512.png" alt="Beispielbild" />
+                <img src="/home/mercus/WebstormProjects/mnemonicks/main-app/public/Images/logo512.png" alt="Beispielbild" />
                 {/* JSX für die Darstellung der Komponente */}
+                <p>Hello</p>
             </div>
         );
     }
