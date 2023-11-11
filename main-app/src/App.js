@@ -1,6 +1,9 @@
 import logo from './logo.svg';
 import './App.css';
-import Tile from "./Components/Tile/Tile";
+import {Tile} from "./Components/Tile/Tile";
+
+
+
 
 function App() {
     return (
