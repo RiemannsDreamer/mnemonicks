@@ -2,7 +2,7 @@
 import React from 'react';
 import Tile from "../Tile/Tile";
 
-import "../../Sytles/MainSites/Alphabets.css"
+import "../../Styles/MainSites/Alphabets.css"
 
 const Alphabets = () => {
     return (

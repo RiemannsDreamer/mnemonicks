@@ -1,6 +1,6 @@
 import React from 'react';
 
-import "../../Sytles/NavPoint.css"
+import "../../Styles/NavPoint.css"
 import {Link} from "react-router-dom";
 
 

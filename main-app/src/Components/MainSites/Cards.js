@@ -2,7 +2,7 @@
 import React from 'react';
 import Tile from "../Tile/Tile";
 
-import "../../Sytles/MainSites/Cards.css"
+import "../../Styles/MainSites/Cards.css"
 
 const Cards = () => {
     return (

@@ -1,7 +1,7 @@
-import "../../Sytles/CornerImageStyle.css"
 
+import "../../Styles/CornerImageStyle.css";
 import React, { useState } from 'react';
-
+import Tooltip from './Tooltip';
 
 const CornerImage = ({ imageUrl, tooltipContent }) => {
     const [showTooltip, setShowTooltip] = useState(false);
@@ -17,7 +17,7 @@ const CornerImage = ({ imageUrl, tooltipContent }) => {
     return (
         <div className="corner-image-container" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
             <img src={imageUrl} alt="Corner Image" className="corner-image" />
-            {showTooltip && <div className="tooltip">{tooltipContent}</div>}
+            {showTooltip && <Tooltip content={tooltipContent} />}
         </div>
     );
 };

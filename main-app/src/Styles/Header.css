@@ -19,6 +19,8 @@
     width: 100px;
     height: 100px;
 
+    border-radius: 50%;
+    box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 .title {

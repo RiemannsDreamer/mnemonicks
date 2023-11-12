@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import "../../Sytles/Footer.css"
+import "../../Styles/Footer.css"
 import Navigation from "./Navigation";
 const Footer = ({navItems}) => {
     return (

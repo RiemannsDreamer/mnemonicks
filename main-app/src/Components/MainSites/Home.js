@@ -2,7 +2,7 @@
 import React from 'react';
 import Tile from "../Tile/Tile";
 
-import "../../Sytles/MainSites/Home.css"
+import "../../Styles/MainSites/Home.css"
 
 const Home = () => {
     return (
@@ -11,98 +11,86 @@ const Home = () => {
             <Tile
                 title="Infos"
                 subtitle="Infocenter for trainings"
-                cornerImageUrl="../../Images/logo512.png"
+                cornerImageUrl="../../Images/Infos.jpg"
                 linkTo="/infos"
-                tooltipTitle="Tooltip Titel 1"
-                tooltipText="Tooltip Text 1"
+                tooltipContent={"Hello World!"}
             />
             <Tile
                 title="Numbers"
                 subtitle="Learn to memorize numbers"
-                cornerImageUrl="../..//Images/logo512.png"
+                cornerImageUrl="../../Images/Numbers.jpg"
                 linkTo="/numbers"
-                tooltipTitle="Tooltip Titel 1"
-                tooltipText="Tooltip Text 1"
+                tooltipContent={"Hello World!"}
             />
             <Tile
                 title="Cards"
                 subtitle="Learn to memorize cards"
-                cornerImageUrl="../..//Images/logo512.png"
+                cornerImageUrl="../../Images/Cards.jpg"
                 linkTo="/cards"
-                tooltipTitle="Tooltip Titel 1"
-                tooltipText="Tooltip Text 1"
+                tooltipContent={"Hello World!"}
             />
             <Tile
                 title="Faces and Names"
                 subtitle="Learn to remember faces and names"
-                cornerImageUrl="../..//Images/logo512.png"
+                cornerImageUrl="../../Images/Faces.jpg"
                 linkTo="/names"
-                tooltipTitle="Tooltip Titel 1"
-                tooltipText="Tooltip Text 1"
+                tooltipContent={"Hello World!"}
             />
             <Tile
                 title="Loci-Method"
                 subtitle="Learn how to use Locis"
-                cornerImageUrl="../..//Images/logo512.png"
+                cornerImageUrl="../../Images/LociMethod.jpg"
                 linkTo="/loci"
-                tooltipTitle="Tooltip Titel 1"
-                tooltipText="Tooltip Text 1"
+                tooltipContent={"Hello World!"}
             />
             <Tile
                 title="Mind-Palaces"
                 subtitle="Create a Mind Palace"
-                cornerImageUrl="../..//Images/logo512.png"
+                cornerImageUrl="../../Images/MindPalace-1.jpg"
                 linkTo="/mind-palace"
-                tooltipTitle="Tooltip Titel 1"
-                tooltipText="Tooltip Text 1"
+                tooltipContent={"Hello World!"}
             />
             <Tile
                 title="PCMPG"
                 subtitle= "© ProCedural Mind Palace Generator"
-                cornerImageUrl="../..//Images/logo512.png"
+                cornerImageUrl="../..//Images/MindPalace-2.jpg"
                 linkTo="/pcmpg"
-                tooltipTitle="Tooltip Titel 1"
-                tooltipText="Tooltip Text 1"
+                tooltipContent={"Hello World!"}
             />
             <Tile
                 title="Vocabulary"
-                subtitle="Learn to memorize numbers"
-                cornerImageUrl="../..//Images/logo512.png"
+                subtitle="Learn to memorize vocab"
+                cornerImageUrl="../../Images/Vocab.jpg"
                 linkTo="/vocab"
-                tooltipTitle="Tooltip Titel 1"
-                tooltipText="Tooltip Text 1"
+                tooltipContent={"Hello World!"}
             />
             <Tile
                 title="Grammar"
-                subtitle="Learn to memorize numbers"
-                cornerImageUrl="../..//Images/logo512.png"
+                subtitle="Learn to memorize Grammar"
+                cornerImageUrl="../../Images/CoolWoman (1).jpg"
                 linkTo="/grammar"
-                tooltipTitle="Tooltip Titel 1"
-                tooltipText="Tooltip Text 1"
+                tooltipContent={"Hello World!"}
             />
             <Tile
                 title="Alphabets"
                 subtitle="Learn to memorize numbers"
-                cornerImageUrl="../..//Images/logo512.png"
+                cornerImageUrl="../../Images/Alphabets.jpg"
                 linkTo="/alphabets"
-                tooltipTitle="Tooltip Titel 1"
-                tooltipText="Tooltip Text 1"
+                tooltipContent={"Hello World!"}
             />
             <Tile
                 title="Major-System"
-                subtitle="Learn to memorize numbers"
-                cornerImageUrl="../..//Images/logo512.png"
+                subtitle="Learn to memorize the Major System"
+                cornerImageUrl="../../Images/Major_System.jpg"
                 linkTo="/major"
-                tooltipTitle="Tooltip Titel 1"
-                tooltipText="Tooltip Text 1"
+                tooltipContent={"Hello World!"}
             />
             <Tile
                 title="Peg-Lists"
-                subtitle="Learn to memorize numbers"
-                cornerImageUrl="../..//Images/logo512.png"
+                subtitle="Learn to memorize Pegs"
+                cornerImageUrl="../../Images/PegLists.jpg"
                 linkTo="/pegs"
-                tooltipTitle="Tooltip Titel 1"
-                tooltipText="Tooltip Text 1"
+                tooltipContent={"Hello World!"}
             />
 
         </div>

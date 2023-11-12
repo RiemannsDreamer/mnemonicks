@@ -2,7 +2,7 @@
 import React from 'react';
 import Tile from "../Tile/Tile";
 
-import "../../Sytles/MainSites/Loci.css"
+import "../../Styles/MainSites/Loci.css"
 
 const Loci = () => {
     return (

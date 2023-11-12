@@ -1,13 +1,13 @@
 import React from 'react';
 import Navigation from './Navigation';
 
-import "../../Sytles/Header.css"
+import "../../Styles/Header.css"
 
 const Header = ({ navItems, title }) => {
     return (
         <header className="header">
             <div className="logo">
-                <img className="logo-img" src="../../Images/logo512.png" alt="Logo" />
+                <img className="logo-img" src="../../Images/Main_Logo.jpg" alt="Logo" />
             </div>
             <div className="header-content">
 

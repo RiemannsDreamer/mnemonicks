@@ -1,4 +1,4 @@
-import "../../Sytles/Tile.css"
+import "../../Styles/Tile.css"
 
 
 import React from 'react';

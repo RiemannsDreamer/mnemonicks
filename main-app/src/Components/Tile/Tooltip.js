@@ -1,14 +1,12 @@
-import React, {Component} from 'react';
-import "../../Sytles/Tooltip.css";
+import React from 'react';
+import "../../Styles/Tooltip.css";
 
-const Tooltip = ({ title, text }) => {
+const Tooltip = ({ content }) => {
     return (
         <div className="tooltip">
-            <strong>{title}</strong>
-            <p>{text}</p>
+            <p>{content}</p>
         </div>
     );
 };
 
 export default Tooltip;
-

@@ -2,7 +2,7 @@
 import React from 'react';
 import Tile from "../Tile/Tile";
 
-import "../../Sytles/MainSites/MindPalace.css"
+import "../../Styles/MainSites/MindPalace.css"
 
 const MindPalace = () => {
     return (

@@ -1,0 +1,33 @@
+
+.corner-image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.corner-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.tooltip {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10vw;
+    height: 10vw;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    display: none;
+    z-index: 2;
+    opacity: 0.7;
+}
+
+.tile:hover .tooltip {
+    display: block;
+    z-index: 1;
+}

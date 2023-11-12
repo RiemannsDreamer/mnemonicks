@@ -2,7 +2,7 @@
 import React from 'react';
 import Tile from "../Tile/Tile";
 
-import "../../Sytles/MainSites/Numbers.css"
+import "../../Styles/MainSites/Numbers.css"
 
 const Numbers = () => {
     return (

@@ -2,7 +2,7 @@
 import React from 'react';
 import Tile from "../Tile/Tile";
 
-import "../../Sytles/MainSites/Grammar.css"
+import "../../Styles/MainSites/Grammar.css"
 
 const Grammar = () => {
     return (

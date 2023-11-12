@@ -1,7 +1,7 @@
 // Navigation.js
 import React from 'react';
 import NavPoint from './NavPoint';
-import "../../Sytles/Navigation.css"
+import "../../Styles/Navigation.css"
 
 const Navigation = ({ navItems, title}) => {
     return (
