@@ -36,7 +36,7 @@ const Home = () => {
                 title="Faces and Names"
                 subtitle="Learn to remember faces and names"
                 cornerImageUrl="../..//Images/logo512.png"
-                linkTo="/faces"
+                linkTo="/names"
                 tooltipTitle="Tooltip Titel 1"
                 tooltipText="Tooltip Text 1"
             />
@@ -100,18 +100,11 @@ const Home = () => {
                 title="Peg-Lists"
                 subtitle="Learn to memorize numbers"
                 cornerImageUrl="../..//Images/logo512.png"
-                linkTo="/peg"
+                linkTo="/pegs"
                 tooltipTitle="Tooltip Titel 1"
                 tooltipText="Tooltip Text 1"
             />
-            <Tile
-                title="Open"
-                subtitle="Learn to memorize numbers"
-                cornerImageUrl="../..//Images/logo512.png"
-                linkTo="/open"
-                tooltipTitle="Tooltip Titel 1"
-                tooltipText="Tooltip Text 1"
-            />
+
         </div>
     );
 };

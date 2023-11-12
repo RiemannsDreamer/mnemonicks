@@ -15,6 +15,8 @@ const Header = ({ navItems, title }) => {
             </div>
             <div className="title">
                 <h1>{title}</h1>
+                <h4>This Website is under CONSTRUCTION:</h4>
+                <h4>Use at your own risk!</h4>
                 <strong>Learn how to memorize everything!</strong>
             </div>
         </header>
