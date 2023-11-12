@@ -1,0 +1,14 @@
+/* In NavPoint.css */
+.nav-point {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #555;
+    padding: 8px;
+    margin: 0 4px;
+    border-radius: 4px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    width: 10vw;
+    height: 3vw;
+}

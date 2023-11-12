@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import "../../Sytles/TooltipStyle.css";
+import "../../Sytles/Tooltip.css";
 
 const Tooltip = ({ title, text }) => {
     return (

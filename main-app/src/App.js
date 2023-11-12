@@ -101,7 +101,30 @@ const App = () => {
                     tooltipTitle="Tooltip Titel 1"
                     tooltipText="Tooltip Text 1"
                 />
-                {/* Weitere Inhalte hier hinzufügen */}
+                <Tile
+                    title="Numbers"
+                    subtitle="Learn to memorize numbers"
+                    cornerImageUrl="../..//Images/logo512.png"
+                    linkTo="/route1"
+                    tooltipTitle="Tooltip Titel 1"
+                    tooltipText="Tooltip Text 1"
+                />
+                <Tile
+                    title="Numbers"
+                    subtitle="Learn to memorize numbers"
+                    cornerImageUrl="../..//Images/logo512.png"
+                    linkTo="/route1"
+                    tooltipTitle="Tooltip Titel 1"
+                    tooltipText="Tooltip Text 1"
+                />
+                <Tile
+                    title="Numbers"
+                    subtitle="Learn to memorize numbers"
+                    cornerImageUrl="../..//Images/logo512.png"
+                    linkTo="/route1"
+                    tooltipTitle="Tooltip Titel 1"
+                    tooltipText="Tooltip Text 1"
+                />
             </main>
             <Footer/>
         </div>

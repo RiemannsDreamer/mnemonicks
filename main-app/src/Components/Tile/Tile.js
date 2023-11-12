@@ -1,4 +1,5 @@
-import "../../Sytles/TileStyle.css"
+import "../../Sytles/Tile.css"
+
 
 import React from 'react';
 import { Link } from 'react-router-dom';

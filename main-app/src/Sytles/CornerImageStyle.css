@@ -1,4 +1,53 @@
-.CornerImage {
-    border: 4px solid black;
-    padding: 10px;
+/* In GlobalStyles.css */
+.corner-image-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px; /* Abstand zum Text */
+}
+
+.corner-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+/* In AdditionalStyles.css */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.corner-image-container:hover .tooltip-container .tooltip {
+    display: block;
+}
+
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip {
+    position: absolute;
+    top: 60px; /* Ändere dies basierend auf der Höhe deines corner-images */
+    left: 50%; /* Position in der Mitte des corner-image */
+    transform: translateX(-50%);
+    width: 16vw;
+    height: 16vw;
+    background-color: white;
+    color: black;
+    padding: 1vw;
+    border-radius: 8px;
+    display: none;
+    z-index: 1; /* Stellt sicher, dass der Tooltip über anderen Elementen liegt */
+}
+
+.tooltip:before {
+    content: '';
+    position: absolute;
+    top: -16px; /* Positionierung über dem Tooltip-Inhalt */
+    left: 50%; /* Zentriert auf der oberen Seite des Tooltips */
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
 }

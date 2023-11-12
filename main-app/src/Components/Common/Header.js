@@ -2,6 +2,7 @@
 import React from 'react';
 import Navigation from './Navigation';
 
+import "../../Sytles/Header.css"
 
 const Header = ({ navItems, title }) => {
     return (

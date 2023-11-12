@@ -1,0 +1,39 @@
+
+
+.tile {
+    border: 3px solid #444;
+    border-radius: 15px;
+    padding: 2vw; /* Padding in vw */
+    text-align: center;
+    background-color: #555;
+    box-shadow: 0 2vw 3vw rgba(0, 0, 0, 0.2); /* Schatten in vw */
+    transition: transform 0.2s ease-in-out;
+
+    width: 13vw; /* Breite in vw */
+    height: 13vw; /* Höhe in vw */
+    position: relative;
+    overflow: hidden;
+}
+
+.tile:hover {
+    transform: translateY(-1vw); /* Hover-Effekt in vw */
+}
+
+.tile-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; /* Breite des Inhalts relativ zur Tile-Breite */
+    color: white; /* Textfarbe */
+}
+
+.tile img {
+    width: 3vw;
+    height: auto;
+    max-height: 10%; /* Maximale Höhe des Bildes relativ zur Tile-Höhe */
+    object-fit: contain; /* Bild bleibt im Container, aber kann die Proportionen beibehalten */
+    border-radius: 1vw; /* Abgerundete Ecken für das Bild in vw */
+
+    margin-bottom: 3vw;
+}
