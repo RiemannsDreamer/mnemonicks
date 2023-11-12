@@ -1,13 +1,25 @@
-import React, { Component } from 'react';
 import "../../Sytles/CornerImageStyle.css"
 
-export function CornerImage()
-{
+import React, { useState } from 'react';
+
+
+const CornerImage = ({ imageUrl, tooltipContent }) => {
+    const [showTooltip, setShowTooltip] = useState(false);
+
+    const handleMouseEnter = () => {
+        setShowTooltip(true);
+    };
+
+    const handleMouseLeave = () => {
+        setShowTooltip(false);
+    };
+
     return (
-        <div className={"CornerImage"}>
-            <img src="/home/mercus/WebstormProjects/mnemonicks/main-app/public/Images/logo512.png" alt="Beispielbild" />
-            {/* JSX für die Darstellung der Komponente */}
-            <p>Hello</p>
+        <div className="corner-image-container" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <img src={imageUrl} alt="Corner Image" className="corner-image" />
+            {showTooltip && <div className="tooltip">{tooltipContent}</div>}
         </div>
     );
-}
+};
+
+export default CornerImage;

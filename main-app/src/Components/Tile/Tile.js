@@ -1,17 +1,21 @@
-import React, { Component } from 'react';
 import "../../Sytles/TileStyle.css"
-import {CornerImage} from "./CornerImage";
 
+import React from 'react';
+import { Link } from 'react-router-dom';
+import CornerImage from "./CornerImage"; // Stelle sicher, dass du den korrekten Pfad angibst
 
-export function Tile()
-{
+const Tile = ({ title, subtitle, cornerImageUrl, tooltipContent }) => {
     return (
-    <div className={"Tile"}>
-        <CornerImage/>
-        <h1>This is a Tile!</h1>
-        <h2>This is a Subtitle</h2>
-        <p>ooo</p>
-        {/* JSX für die Darstellung der Komponente */}
-    </div>
-);
-}
+
+            <div className="tile">
+                <CornerImage imageUrl={cornerImageUrl} tooltipContent={tooltipContent} />
+                <div className="tile-content">
+                    <h3>{title}</h3>
+                    <h4>{subtitle}</h4>
+                </div>
+            </div>
+
+    );
+};
+
+export default Tile;
