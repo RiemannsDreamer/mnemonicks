@@ -4,18 +4,11 @@ import React from 'react';
 import {Link} from "react-router-dom";
 
 import "../../Sytles/Footer.css"
-const Footer = () => {
+import Navigation from "./Navigation";
+const Footer = ({navItems}) => {
     return (
         <footer className="footer">
-            <nav>
-            <ul>
-                <li>Impressum</li>
-                <li>Contact Form</li>
-                <li>Privacy</li>
-                <li>Cookies</li>
-                <li>Credits</li>
-            </ul>
-        </nav>
+            <Navigation navItems={navItems}/>
             <p>&copy; 2023 Mnemonicks. all rights reserved.</p>
         </footer>
     );

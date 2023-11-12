@@ -19,9 +19,12 @@ const App = () => {
     ];
 
     const footerNavItems = [
-        { content: 'Home' },
-        { content: 'About' },
+        { content: 'Impressum' },
         { content: 'Contact' },
+        { content: 'Privacy' },
+        { content: 'Cookies' },
+        { content: 'Credits' },
+
     ];
 
     return (
@@ -126,7 +129,7 @@ const App = () => {
                     tooltipText="Tooltip Text 1"
                 />
             </main>
-            <Footer/>
+            <Footer navItems={footerNavItems}/>
         </div>
     );
 };
