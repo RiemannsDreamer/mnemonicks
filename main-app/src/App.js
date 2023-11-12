@@ -29,9 +29,10 @@ const App = () => {
     const headerNavItems = [
         { content: 'Home', linkTo: '/' },
         { content: 'About the Project' },
-        { content: 'About \"Trainer\"' },
+        { content: 'About   ©MnemoMax' },
         { content: 'Documentation' },
         { content: 'Contact' },
+        { content: 'Forum' },
     ];
 
     const footerNavItems = [

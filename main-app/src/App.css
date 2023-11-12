@@ -9,9 +9,9 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2vw;
-    padding: 7svw;
+    padding: 5vw;
     margin: 0 auto;
-    max-width: calc(100% - 10vw);
+    max-width: calc(100% - 5vw);
 
     background-color: #333;
 }

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navigation from './Navigation';
 
@@ -7,10 +6,11 @@ import "../../Sytles/Header.css"
 const Header = ({ navItems, title }) => {
     return (
         <header className="header">
+            <div className="logo">
+                <img className="logo-img" src="../../Images/logo512.png" alt="Logo" />
+            </div>
             <div className="header-content">
-                <div className="logo">
-                    <img className="logo" src="../../Images/logo512.png" alt="Logo" />
-                </div>
+
                 <Navigation navItems={navItems} />
             </div>
             <div className="title">
