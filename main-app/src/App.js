@@ -16,7 +16,7 @@ import Alphabets from './Components/MainSites/Alphabets';
 import Cards from './Components/MainSites/Cards';
 import Grammar from './Components/MainSites/Grammar';
 import Loci from './Components/MainSites/Loci'
-import Major from './Components/MainSites/Cards';
+import Major from './Components/MainSites/Major';
 import MindPalace from "./Components/MainSites/Mind-Palace";
 import Names from "./Components/MainSites/Names";
 import PCMPG from "./Components/MainSites/PCMPG";
