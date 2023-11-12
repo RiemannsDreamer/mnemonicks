@@ -2,11 +2,11 @@
 import React from 'react';
 import Tile from "../Tile/Tile";
 
-import "../../App.css"
+import "../../Sytles/MainSites/Home.css"
 
 const Home = () => {
     return (
-        <div>
+        <div className={"home-container"}>
 
             <Tile
                 title="Infos"
