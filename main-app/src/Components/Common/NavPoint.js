@@ -1,4 +1,4 @@
-// NavPoint.js
+
 import React from 'react';
 
 import "../../Sytles/NavPoint.css"

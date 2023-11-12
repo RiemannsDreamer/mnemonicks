@@ -1,7 +1,6 @@
-import logo from './logo.svg';
+
 import './App.css';
-// App.js
-// App.js
+
 
 import React from 'react';
 import Header from './Components/Common/Header';
@@ -33,9 +32,9 @@ const App = () => {
             <main>
                 {/* Inhalt deiner App.js hier */}
                 <Tile
-                    title="Numbers"
-                    subtitle="Learn to memorize numbers"
-                    cornerImageUrl="../..//Images/logo512.png"
+                    title="Infos"
+                    subtitle="Infocenter for trainings"
+                    cornerImageUrl="../../Images/logo512.png"
                     linkTo="/route1"
                     tooltipTitle="Tooltip Titel 1"
                     tooltipText="Tooltip Text 1"
@@ -49,32 +48,40 @@ const App = () => {
                 tooltipText="Tooltip Text 1"
                 />
                 <Tile
-                    title="Numbers"
-                    subtitle="Learn to memorize numbers"
+                    title="Cards"
+                    subtitle="Learn to memorize cards"
                     cornerImageUrl="../..//Images/logo512.png"
                     linkTo="/route1"
                     tooltipTitle="Tooltip Titel 1"
                     tooltipText="Tooltip Text 1"
                 />
                 <Tile
-                    title="Numbers"
-                    subtitle="Learn to memorize numbers"
+                    title="Faces and Names"
+                    subtitle="Learn to remember faces and names"
                     cornerImageUrl="../..//Images/logo512.png"
                     linkTo="/route1"
                     tooltipTitle="Tooltip Titel 1"
                     tooltipText="Tooltip Text 1"
                 />
                 <Tile
-                    title="Numbers"
-                    subtitle="Learn to memorize numbers"
+                    title="Loci-Method"
+                    subtitle="Learn how to use Locis"
                     cornerImageUrl="../..//Images/logo512.png"
                     linkTo="/route1"
                     tooltipTitle="Tooltip Titel 1"
                     tooltipText="Tooltip Text 1"
                 />
                 <Tile
-                    title="Numbers"
-                    subtitle="Learn to memorize numbers"
+                    title="Mind-Palaces"
+                    subtitle="Create a Mind Palace"
+                    cornerImageUrl="../..//Images/logo512.png"
+                    linkTo="/route1"
+                    tooltipTitle="Tooltip Titel 1"
+                    tooltipText="Tooltip Text 1"
+                />
+                <Tile
+                    title="PMPG"
+                    subtitle= " © Procedural Mind Palace Generator"
                     cornerImageUrl="../..//Images/logo512.png"
                     linkTo="/route1"
                     tooltipTitle="Tooltip Titel 1"

@@ -1,4 +1,4 @@
-/* In Miscellaneous.css */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,10 +8,10 @@ body {
 main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2vw; /* Gleichmäßiger Abstand zwischen den Tiles */
-    padding: 7svw; /* Rand um das Grid */
-    margin: 0 auto; /* Zentrierung des Grids */
-    max-width: calc(100% - 10vw); /* Maximale Breite des Grids */
+    gap: 2vw;
+    padding: 7svw;
+    margin: 0 auto;
+    max-width: calc(100% - 10vw);
 
     background-color: #333;
 }

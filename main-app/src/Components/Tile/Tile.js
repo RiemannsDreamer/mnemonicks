@@ -2,9 +2,8 @@ import "../../Sytles/Tile.css"
 
 
 import React from 'react';
-import { Link } from 'react-router-dom';
-import CornerImage from "./CornerImage"; // Stelle sicher, dass du den korrekten Pfad angibst
 
+import CornerImage from "./CornerImage";
 const Tile = ({ title, subtitle, cornerImageUrl, tooltipContent }) => {
     return (
 
