@@ -7,7 +7,7 @@ const Header = ({ navItems, title }) => {
     return (
         <header className="header">
             <div className="logo">
-                <img className="logo-img" src="../../Images/Main_Logo.jpg" alt="Logo" />
+                <img className="logo-img" src="../../Images/Logos/Main_Logo.jpg" alt="Logo" />
             </div>
             <div className="header-content">
 

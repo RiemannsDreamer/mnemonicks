@@ -12,3 +12,13 @@
     width: 12vw;
     height: 4vw;
 }
+
+.nav-point img
+{
+    float:left;
+    margin-right: 10px;
+}
+
+.nav-point p {
+    margin-left: 30px;
+}

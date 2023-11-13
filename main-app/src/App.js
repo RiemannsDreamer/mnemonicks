@@ -27,20 +27,20 @@ import Vocab from "./Components/MainSites/Vocab";
 const App = () => {
 
     const headerNavItems = [
-        { content: 'Home', linkTo: '/' },
-        { content: 'About the Project' },
-        { content: 'About   ©MnemoMax' },
-        { content: 'Documentation' },
-        { content: 'Contact' },
-        { content: 'Forum' },
+        { content: 'Home', linkTo: '/',logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"This is the Tooltip" },
+        { content: 'About the Project' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"This is the Tooltip"},
+        { content: 'About   ©MnemoMax',logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"This is the Tooltip" },
+        { content: 'Documentation' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"This is the Tooltip"},
+        { content: 'Contact' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"This is the Tooltip"},
+        { content: 'Forum' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"This is the Tooltip"},
     ];
 
     const footerNavItems = [
-        { content: 'Impressum' },
-        { content: 'Contact' },
-        { content: 'Privacy' },
-        { content: 'Cookies' },
-        { content: 'Credits' },
+        { content: 'Impressum',logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"This is the Tooltip" },
+        { content: 'Contact' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"This is the Tooltip"},
+        { content: 'Privacy' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"This is the Tooltip"},
+        { content: 'Cookies' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"This is the Tooltip"},
+        { content: 'Credits' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"This is the Tooltip"},
 
     ];
 

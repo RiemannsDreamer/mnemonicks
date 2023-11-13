@@ -13,6 +13,7 @@ const Tile = ({title, subtitle, cornerImageUrl, tooltipContent, linkTo}) => {
             <div className="tile">
 
                 <CornerImage imageUrl={cornerImageUrl} tooltipContent={tooltipContent}/>
+
                 <div className="tile-content">
                     <h3>{title}</h3>
                     <h4>{subtitle}</h4>
