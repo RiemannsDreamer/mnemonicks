@@ -22,3 +22,11 @@
 .nav-point p {
     margin-left: 30px;
 }
+
+/* NavPoint.css */
+
+.nav-link {
+    color: white; /* Textfarbe auf Weiß setzen */
+    text-decoration: none; /* Unterstreichung entfernen */
+}
+

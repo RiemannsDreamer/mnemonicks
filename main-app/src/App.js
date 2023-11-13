@@ -27,20 +27,20 @@ import Vocab from "./Components/MainSites/Vocab";
 const App = () => {
 
     const headerNavItems = [
-        { content: 'Home', linkTo: '/',logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"This is the Tooltip" },
-        { content: 'About the Project' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"This is the Tooltip"},
-        { content: 'About   ©MnemoMax',logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"This is the Tooltip" },
-        { content: 'Documentation' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"This is the Tooltip"},
-        { content: 'Contact' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"This is the Tooltip"},
-        { content: 'Forum' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"This is the Tooltip"},
+        { content: 'Home', linkTo: '/',logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"Landingpage with all SubApps. Here you can get infos about methods and train your skills with MnemoMax." },
+        { content: 'About' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"Infos about the project, the development and the background. Some general infos."},
+        { content: '©MnemoMax',logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"©MnemoMax is the trainer app of mnemonicks. With this app you can train several different methods and contents."},
+        { content: 'Docs' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"Documentation of this website. This Docs have two parts. First, the Docs about development. Second, the Docs about how to use the components"},
+        { content: 'Contact' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"Simple contact form to get in touch with the developers"},
+        { content: 'Forum' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"In this forum, we can build a solid community around the app. Discuss your questions and feature requests with others"},
     ];
 
     const footerNavItems = [
-        { content: 'Impressum',logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"This is the Tooltip" },
-        { content: 'Contact' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"This is the Tooltip"},
-        { content: 'Privacy' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"This is the Tooltip"},
-        { content: 'Cookies' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"This is the Tooltip"},
-        { content: 'Credits' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"This is the Tooltip"},
+        { content: 'Impressum',logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"Standard Impressum of this website" },
+        { content: 'Contact' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"Simple contact form to get in touch with the developers"},
+        { content: 'Privacy' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"Privacy Policy of this website"},
+        { content: 'Cookies' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"Cookie Policy of this website"},
+        { content: 'Credits' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"Some Credits to all the persons who have contributed something to this project."},
 
     ];
 

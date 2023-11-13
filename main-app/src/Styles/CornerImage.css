@@ -13,21 +13,6 @@
     object-fit: cover;
 }
 
-.tooltip {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 10vw;
-    height: 10vw;
-    background-color: white;
-    color: black;
-    padding: 20px;
-    border-radius: 10px;
-    display: none;
-    z-index: 2;
-    opacity: 0.7;
-}
 
 .corner-image-container:hover .tooltip {
     display: block;
