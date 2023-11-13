@@ -7,10 +7,11 @@ import "../../Styles/MainSites/MnemoMax/MnemoMenu.css"
 const MnemoMenu = () => {
     const menuItems = [
         { title: "Edit", items: ["Cut", "Copy", "Paste"] },
-        { title: "Trainings", items: ["Option 1", "Option 2", "Option 3"] },
+        { title: "Trainings", items: ["Numbers","Cards","Names","Faces"] },
         { title: "Settings", items: ["Option A", "Option B", "Option C"] },
         { title: "File", items: ["Open", "Save", "Download"] },
         { title: "Sonstiges", items: ["Item 1", "Item 2", "Item 3"] },
+        { title: "Anderes", items: ["Item 1", "Item 2", "Item 3"] }
     ];
 
     return (

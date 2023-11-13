@@ -15,7 +15,6 @@ const buttonData = [
 const MnemoControlPanel = () => {
     return (
         <div className="mnemo-control-panel">
-            <h1>Control Panel</h1>
             <div className="mnemo-button-container">
                 {buttonData.map((button, index) => (
                     <MnemoButton key={index} title={button.title} />

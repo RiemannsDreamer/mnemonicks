@@ -22,7 +22,7 @@ const MnemoProgressBar = () => {
     return (
         <div className="progress-bar">
             <div className="progress-info">
-                <h1>Mnemo Progress</h1>
+                <strong>Progress</strong>
                 <div className="progress-data">
                     <p>Relative: {exampleProgressData.relative}%</p>
                     <p>Absolute: {exampleProgressData.absolute} tasks</p>
