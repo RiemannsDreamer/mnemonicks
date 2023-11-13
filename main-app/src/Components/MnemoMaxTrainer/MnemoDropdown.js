@@ -1,4 +1,4 @@
-// MnemoDropdown.js
+
 import React, { useState } from "react";
 import "../../Styles/MainSites/MnemoMax/MnemoDropdown.css";
 

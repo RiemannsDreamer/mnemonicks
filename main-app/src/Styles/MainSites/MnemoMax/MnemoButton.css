@@ -1,4 +1,4 @@
-/* MnemoButton.css */
+
 .mnemo-button-container {
     margin: 0 10px;
 }
@@ -13,7 +13,7 @@
     text-align: center;
     border-radius: 10px;
     box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.6);
-    margin-bottom: 10px; /* Optional: Abstand zwischen den Buttons */
+    margin-bottom: 10px;
 }
 
 .mnemo-button:hover {

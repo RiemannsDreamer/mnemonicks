@@ -1,6 +1,6 @@
 
-    /* MnemoMenu.css */
+
 .menu {
     display: flex;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Schatten für das gesamte Menü */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

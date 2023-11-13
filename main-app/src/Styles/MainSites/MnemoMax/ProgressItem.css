@@ -1,0 +1,22 @@
+
+.progress-item {
+    margin-bottom: 10px;
+}
+
+.progress-label {
+    font-weight: bold;
+}
+
+.progress-content-bar {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 3vh;
+    background-color: #333;
+    border: 2px solid #666;
+    padding: 10px;
+}
+
+.progress-fill {
+    background-color: #4caf50;
+}

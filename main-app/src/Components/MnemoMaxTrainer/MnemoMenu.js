@@ -1,4 +1,4 @@
-// MnemoMenu.js
+
 import React from "react";
 import MnemoDropdown from "./MnemoDropdown"; // Stelle sicher, dass der Pfad korrekt ist
 

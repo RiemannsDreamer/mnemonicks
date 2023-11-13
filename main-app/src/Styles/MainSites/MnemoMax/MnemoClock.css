@@ -1,11 +1,12 @@
-/* MnemoClock.css */
 
 .mnemo-clock-container {
     background-color: black;
     color: #00ff00;
     padding: 10px;
-    display: inline-block;
     font-size: 5vw;
+    height: 25%;
+    width: 35%;
+    margin-left: auto;
 }
 
 .mnemo-clock-container span {

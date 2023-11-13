@@ -1,4 +1,4 @@
-// MnemoControlPanel.js
+
 import React from "react";
 import MnemoButton from "./MnemoButton";
 import "../../Styles/MainSites/MnemoMax/MnemoControlPanel.css";

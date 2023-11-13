@@ -18,7 +18,7 @@ export default function MnemoMax(){
                 <MnemoMenu/>
             </div>
             <div className={"mnemo-main-content-container"}>
-                <div className={"progress-bar"}>
+                <div className={"progress-content"}>
                     <MnemoProgressBar/>
                 </div>
                 <div className={"mnemo-app-container"}>
