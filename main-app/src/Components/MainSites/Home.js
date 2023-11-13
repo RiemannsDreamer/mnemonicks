@@ -102,7 +102,7 @@ const Home = () => {
 
 
             <Tile
-                title="Geographys"
+                title="Geography"
                 subtitle="Learn to memorize geography"
                 cornerImageUrl="../../Images/Logos/CoolWoman (2).jpg"
                 linkTo="/pegs"
