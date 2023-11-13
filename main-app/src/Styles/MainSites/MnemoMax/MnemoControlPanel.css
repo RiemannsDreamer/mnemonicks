@@ -1,0 +1,17 @@
+/* MnemoControlPanel.css */
+
+.mnemo-control-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zentriert den Inhalt horizontal */
+}
+
+.mnemo-button-container {
+    display: flex;
+    gap: 10px; /* Abstand zwischen den Buttons */
+}
+
+/* Jeder MnemoButton bekommt den Stil 'mnemo-button' zugewiesen, um die Größe zu regulieren */
+.mnemo-button {
+    flex: 1;
+}

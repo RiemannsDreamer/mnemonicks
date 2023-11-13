@@ -1,0 +1,60 @@
+/* MnemoMax.css */
+
+/* Allgemeine Container-Stile */
+.mnemo-max-container {
+    display: flex;
+    flex-direction: column;
+    height: 90vh; /* Füllt den gesamten Bildschirm vertikal aus */
+    width: 90vw;
+    border: 2px solid #000; /* Schwarze Umrandung für den Gesamtcontainer */
+}
+
+.mnemo-menu-container {
+    width: 100%;
+    height: 12%;
+    border: 2px solid #f00; /* Rote Umrandung für Menü-Container */
+}
+
+.mnemo-main-content-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border: 2px solid #00f; /* Blaue Umrandung für Hauptinhaltcontainer */
+}
+
+/* Stile für den App-Container */
+.mnemo-app-container {
+    display: flex;
+    flex: 1;
+    position: relative; /* Positionierung für absolute Position der Uhr */
+    border: 2px solid #0f0; /* Grüne Umrandung für den App-Container */
+}
+
+/* Stile für die Uhr */
+.mnemo-clock {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 2px solid #0f0; /* Grüne Umrandung für die Uhr */
+}
+
+/* Stile für den Inhalt */
+.mnemo-content {
+    flex: 1;
+    overflow: auto; /* Scrollen, wenn der Inhalt zu groß ist */
+    border: 2px solid #ff0; /* Gelbe Umrandung für den Inhalt */
+}
+
+/* Stile für das Control Panel */
+.mnemo-control-panel {
+    height: 100%;
+    width: 100%;
+    background-color: #f0f; /* Hintergrundfarbe für Sichtbarkeit */
+    border: 2px solid #f0f; /* Violette Umrandung für das Steuerungspanel */
+}
+
+/* Stile für den Fortschrittsbalken */
+.mnemo-progress-bar {
+    width: 30%;
+    border: 2px solid #ccc; /* Graue Umrandung für den Fortschrittsbalken */
+}

@@ -1,0 +1,42 @@
+
+/* MnemoDropdown.css */
+.dropdown {
+    position: relative;
+    margin: 0 10px;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #333; /* Dunkle Hintergrundfarbe für den Dropdown-Toggle */
+    color: #fff; /* Textfarbe für den Dropdown-Toggle */
+    border: 1px solid #555; /* Randfarbe für den Dropdown-Toggle */
+    border-radius: 5px; /* Abgerundete Ecken für den Dropdown-Toggle */
+
+    width: 10vw;
+    text-align: center;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #555; /* Dunkle Hintergrundfarbe für das Dropdown-Menü */
+    border: 1px solid #777; /* Randfarbe für das Dropdown-Menü */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Schatten für das Dropdown-Menü */
+    border-radius: 5px; /* Abgerundete Ecken für das Dropdown-Menü */
+}
+
+.dropdown-item {
+    width: 100%; /* Alle Elemente haben die gleiche Breite */
+    padding: 10px;
+    cursor: pointer;
+    color: #fff; /* Textfarbe für die Dropdown-Elemente */
+    &:hover {
+        background-color: #777; /* Farbe bei Hover über Dropdown-Element */
+    }
+    width: 10vw;
+    text-align: center;
+}
