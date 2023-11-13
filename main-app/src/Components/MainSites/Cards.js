@@ -10,7 +10,7 @@ const Cards = () => {
             <Tile
                 title="52-Poker"
                 subtitle="Learn a poker-set"
-                cornerImageUrl="../../Images/logo512.png"
+                cornerImageUrl="../../Images/Logos/Numbers2.jpg"
                 linkTo="/poker"
                 tooltipTitle="Tooltip Titel 1"
                 tooltipText="Tooltip Text 1"

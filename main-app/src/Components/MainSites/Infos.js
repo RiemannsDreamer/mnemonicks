@@ -11,7 +11,7 @@ const Infos = () => {
             <Tile
                 title="Web-Reference"
                 subtitle="Some (good) references"
-                cornerImageUrl="../../Images/logo512.png"
+                cornerImageUrl="../../Images/Logos/Numbers2.jpg"
                 linkTo="/reference"
                 tooltipTitle="Tooltip Titel 1"
                 tooltipText="Tooltip Text 1"
@@ -19,7 +19,7 @@ const Infos = () => {
             <Tile
                 title="Wiki articles"
                 subtitle="Some selected articles"
-                cornerImageUrl="../../Images/logo512.png"
+                cornerImageUrl="../../Images/Logos/Numbers2.jpg"
                 linkTo="/wikis"
                 tooltipTitle="Tooltip Titel 1"
                 tooltipText="Tooltip Text 1"
@@ -27,15 +27,14 @@ const Infos = () => {
             <Tile
                 title="Books"
                 subtitle="Some Books in English and German"
-                cornerImageUrl="../../Images/logo512.png"
-                linkTo="/books"
+                cornerImageUrl="../../Images/Logos/Numbers2.jpg"
                 tooltipTitle="Tooltip Titel 1"
                 tooltipText="Tooltip Text 1"
             />
             <Tile
                 title="Own"
                 subtitle="Own material"
-                cornerImageUrl="../../Images/logo512.png"
+                cornerImageUrl="../../Images/Logos/Numbers2.jpg"
                 linkTo="/own"
                 tooltipTitle="Tooltip Titel 1"
                 tooltipText="Tooltip Text 1"

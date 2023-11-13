@@ -7,10 +7,12 @@
     padding: 8px;
     margin: 10px;
     border-radius: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     width: 12vw;
     height: 4vw;
+
+
+    box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.6);
 }
 
 .nav-point img

@@ -10,7 +10,7 @@ const Alphabets = () => {
             <Tile
                 title="Plants"
                 subtitle="An alphabet with only Plants"
-                cornerImageUrl="../../Images/logo512.png"
+                cornerImageUrl="../../Images/Logos/Numbers2.jpg"
                 linkTo="/plant-alphabet"
                 tooltipTitle="Tooltip Titel 1"
                 tooltipText="Tooltip Text 1"

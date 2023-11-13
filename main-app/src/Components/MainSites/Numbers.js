@@ -10,7 +10,7 @@ const Numbers = () => {
             <Tile
                 title="Random"
                 subtitle="Learn random decimals"
-                cornerImageUrl="../../Images/logo512.png"
+                cornerImageUrl="../../Images/Logos/Numbers2.jpg"
                 linkTo="/random-numbers"
                 tooltipTitle="Tooltip Titel 1"
                 tooltipText="Tooltip Text 1"
@@ -18,7 +18,7 @@ const Numbers = () => {
             <Tile
                 title="Special"
                 subtitle="Learn special numbers like pi and e"
-                cornerImageUrl="../..//Images/logo512.png"
+                cornerImageUrl="../../Images/Logos/Numbers2.jpg"
                 linkTo="/special-numbers"
                 tooltipTitle="Tooltip Titel 1"
                 tooltipText="Tooltip Text 1"
@@ -26,7 +26,7 @@ const Numbers = () => {
             <Tile
                 title="Binary"
                 subtitle="Learn binary numbers"
-                cornerImageUrl="../..//Images/logo512.png"
+                cornerImageUrl="../../Images/Logos/Numbers2.jpg"
                 linkTo="/binaries"
                 tooltipTitle="Tooltip Titel 1"
                 tooltipText="Tooltip Text 1"
@@ -34,7 +34,7 @@ const Numbers = () => {
             <Tile
                 title="Own"
                 subtitle="Learn your own saved numbers"
-                cornerImageUrl="../..//Images/logo512.png"
+                cornerImageUrl="../../Images/Logos/Numbers2.jpg"
                 linkTo="/own-numbers"
                 tooltipTitle="Tooltip Titel 1"
                 tooltipText="Tooltip Text 1"
