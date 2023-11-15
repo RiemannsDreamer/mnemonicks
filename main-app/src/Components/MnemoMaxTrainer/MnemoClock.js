@@ -1,19 +1,37 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import "../../Styles/MainSites/MnemoMax/MnemoClock.css";
 
-import "../../Styles/MainSites/MnemoMax/MnemoClock.css"
+// Import contexts
+import { LearningIsRunningContext, ClockCountSeconds } from "../MainSites/MainMenu/MnemoContexts";
 
 const MnemoClock = () => {
-    const [startTime, setStartTime] = useState(new Date());
-    const [elapsedTime, setElapsedTime] = useState(0);
+    const { isRunning, setIsRunning } = useContext(LearningIsRunningContext);
+    const { timeInSeconds, setTimeInSeconds } = useContext(ClockCountSeconds);
+
+    const [elapsedTime, setElapsedTime] = useState(timeInSeconds * 1000);
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            const now = new Date();
-            setElapsedTime(now - startTime);
-        }, 1000);
+        let interval;
 
+        if (isRunning) {
+            const startTime = new Date() - elapsedTime;
+
+            // Aktualisiere die Zeit sofort
+            const updateElapsedTime = () => {
+                const now = new Date();
+                setElapsedTime(now - startTime);
+                setTimeInSeconds(Math.floor(elapsedTime / 1000)); // Aktualisiere timeInSeconds
+            };
+
+            // Starte das Intervall
+            interval = setInterval(updateElapsedTime, 1000);
+        } else {
+            clearInterval(interval);
+        }
+
+        // Kläre das Intervall auf, wenn die Komponente unmontiert wird
         return () => clearInterval(interval);
-    }, [startTime]);
+    }, [isRunning, elapsedTime, setTimeInSeconds]);
 
     const formatDigit = (digit) => (digit < 10 ? `0${digit}` : digit);
 

@@ -1,21 +1,19 @@
-
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "../../Styles/MainSites/MnemoMax/MnemoButton.css";
+import { LearningIsRunningContext } from "../MainSites/MainMenu/MnemoContexts";
 
-const MnemoButton = ({ title, onClick }) => {
-    const [clicked, setClicked] = useState(false);
+const MnemoButton = ({ title, action, onClick }) => {
+    const { setIsLearningRunning, setCountSeconds } = useContext(LearningIsRunningContext);
 
-    const handleClick = () => {
-        setClicked(true);
-        onClick && onClick();
+    const handleButtonClick = () => {
+        onClick && onClick(action);
     };
 
     return (
         <div className={"mnemo-button-container"}>
-            <div className={"mnemo-button"} onClick={handleClick}>
+            <div className={"mnemo-button"} onClick={handleButtonClick}>
                 {title}
             </div>
-            {/*{}clicked && <p>Button wurde geklickt!</p>}*/}
         </div>
     );
 };
