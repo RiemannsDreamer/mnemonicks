@@ -2,33 +2,31 @@ import React, {useState, useEffect, useContext} from "react";
 import "../../Styles/MainSites/MnemoMax/MnemoClock.css";
 
 // Import contexts
-import {LearningIsRunningContext, ClockCountSeconds} from "../MainSites/MainMenu/MnemoContexts";
+import {LearningIsRunningContext, ClockCountSeconds,ActualStartTime} from "../MainSites/MainMenu/MnemoContexts";
 
 const MnemoClock = () => {
     const {isLearningRunning, setIsLearningRunning} = useContext(LearningIsRunningContext);
     const {timeInSeconds, setTimeInSeconds} = useContext(ClockCountSeconds);
+    let {actualStartTime,setActualStartTime} = useContext(ActualStartTime)
 
-    const [elapsedTime, setElapsedTime] = useState(0);
 
     let intervalId;
     useEffect(() => {
 
 
         if (isLearningRunning) {
-            const startTime = new Date().getTime() / 1000;
+            let startTime = new Date().getTime() / 1000
 
             const updateElapsedTime = () => {
                 const actualTime = new Date().getTime() / 1000;
-                const elapsedSeconds = (actualTime - startTime);
-                setElapsedTime(elapsedSeconds);
+                const elapsedSeconds = (actualTime -  startTime);
 
-                setTimeInSeconds(elapsedSeconds);
+                setTimeInSeconds(timeInSeconds + Math.floor(elapsedSeconds));
             };
 
             intervalId = setInterval(updateElapsedTime, 1000);
         } else {
             clearInterval(intervalId);
-            setElapsedTime(0);
         }
 
         return () => {

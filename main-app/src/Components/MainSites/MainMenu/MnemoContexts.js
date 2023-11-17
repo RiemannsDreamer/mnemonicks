@@ -20,4 +20,6 @@ export const LearningIsRunningContext = createContext(false)
  * -> Later impl.
  * @type {React.Context<number>}
  */
-export const ClockCountSeconds = createContext(123)
+export const ClockCountSeconds = createContext(0)
+
+export const ActualStartTime = createContext(0)
