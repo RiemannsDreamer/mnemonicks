@@ -11,11 +11,11 @@ import { LearningIsRunningContext, ClockCountSeconds } from "./MnemoContexts";
 
 export default function MnemoMax() {
     const [isLearningRunning, setIsLearningRunning] = useState(false);
-    const [countSeconds, setCountSeconds] = useState(0);
+    const [timeInSeconds, setTimeInSeconds] = useState(0);
 
     return (
         <LearningIsRunningContext.Provider value={{ isLearningRunning, setIsLearningRunning }}>
-            <ClockCountSeconds.Provider value={{ countSeconds, setCountSeconds }}>
+            <ClockCountSeconds.Provider value={{ timeInSeconds, setTimeInSeconds }}>
                 <div className={"mnemo-max-container"}>
                     <div className={"mnemo-menu-container"}>
                         <MnemoMenu />

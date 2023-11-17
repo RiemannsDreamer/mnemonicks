@@ -1,51 +1,53 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, {useState, useEffect, useContext} from "react";
 import "../../Styles/MainSites/MnemoMax/MnemoClock.css";
 
 // Import contexts
-import { LearningIsRunningContext, ClockCountSeconds } from "../MainSites/MainMenu/MnemoContexts";
+import {LearningIsRunningContext, ClockCountSeconds} from "../MainSites/MainMenu/MnemoContexts";
 
 const MnemoClock = () => {
-    const { isRunning, setIsRunning } = useContext(LearningIsRunningContext);
-    const { timeInSeconds, setTimeInSeconds } = useContext(ClockCountSeconds);
+    const {isLearningRunning, setIsLearningRunning} = useContext(LearningIsRunningContext);
+    const {timeInSeconds, setTimeInSeconds} = useContext(ClockCountSeconds);
 
-    const [elapsedTime, setElapsedTime] = useState(timeInSeconds * 1000);
+    const [elapsedTime, setElapsedTime] = useState(0);
 
+    let intervalId;
     useEffect(() => {
-        let interval;
 
-        if (isRunning) {
-            const startTime = new Date() - elapsedTime;
 
-            // Aktualisiere die Zeit sofort
+        if (isLearningRunning) {
+            const startTime = new Date().getTime() / 1000;
+
             const updateElapsedTime = () => {
-                const now = new Date();
-                setElapsedTime(now - startTime);
-                setTimeInSeconds(Math.floor(elapsedTime / 1000)); // Aktualisiere timeInSeconds
+                const actualTime = new Date().getTime() / 1000;
+                const elapsedSeconds = (actualTime - startTime);
+                setElapsedTime(elapsedSeconds);
+
+                setTimeInSeconds(elapsedSeconds);
             };
 
-            // Starte das Intervall
-            interval = setInterval(updateElapsedTime, 1000);
+            intervalId = setInterval(updateElapsedTime, 1000);
         } else {
-            clearInterval(interval);
+            clearInterval(intervalId);
+            setElapsedTime(0);
         }
 
-        // Kläre das Intervall auf, wenn die Komponente unmontiert wird
-        return () => clearInterval(interval);
-    }, [isRunning, elapsedTime, setTimeInSeconds]);
+        return () => {
+            clearInterval(intervalId);
+        };
+    }, [isLearningRunning, setTimeInSeconds]);
 
     const formatDigit = (digit) => (digit < 10 ? `0${digit}` : digit);
 
-    const totalSeconds = Math.floor(elapsedTime / 1000);
-    const hours = formatDigit(Math.floor(totalSeconds / 3600));
-    const minutes = formatDigit(Math.floor((totalSeconds % 3600) / 60));
-    const seconds = formatDigit(totalSeconds % 60);
+    const hours = formatDigit(Math.floor(timeInSeconds / 3600));
+    const minutes = formatDigit(Math.floor((timeInSeconds % 3600) / 60));
+    const seconds = formatDigit(Math.floor(timeInSeconds % 60));
 
     return (
         <div className={"mnemo-clock-container"}>
             <span>{hours}</span>
-            <span style={{ margin: "0 5px" }}>:</span>
+            <span style={{margin: "0 4px"}}>:</span>
             <span>{minutes}</span>
-            <span style={{ margin: "0 5px" }}>:</span>
+            <span style={{margin: "0 4px"}}>:</span>
             <span>{seconds}</span>
         </div>
     );
