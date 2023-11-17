@@ -7,7 +7,7 @@ import {ClockCountSeconds} from "../MainSites/MainMenu/MnemoContexts";
 const MnemoContent = () => {
 
     const {timeInSeconds,setTimeInSeconds} = useContext(ClockCountSeconds);
-    console.log('timeInSeconds:', timeInSeconds);
+
 
     return (
 
