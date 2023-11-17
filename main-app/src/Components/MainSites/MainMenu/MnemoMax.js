@@ -27,9 +27,9 @@ export default function MnemoMax() {
             <ClockCountSeconds.Provider value={{timeInSeconds, setTimeInSeconds}}>
                 <ActualStartTime.Provider value={{actualStartTime, setActualStartTime}}>
                     <ActualTraining.Provider value={{actualTraining, setActualTraining}}>
-                        <ActualChunkIndex value={{actualChunkIndex, setActualChunkIndex}}>
-                            <BatchSize value={{batchSize, setBatchSize}}>
-                                <ChunkSize value={{chunkSize, setChunkSize}}>
+                        <ActualChunkIndex.Provider value={{actualChunkIndex, setActualChunkIndex}}>
+                            <BatchSize.Provider value={{batchSize, setBatchSize}}>
+                                <ChunkSize.Provider value={{chunkSize, setChunkSize}}>
                                     <div className={"mnemo-max-container"}>
                                         <div className={"mnemo-menu-container"}>
                                             <MnemoMenu/>
@@ -45,9 +45,9 @@ export default function MnemoMax() {
                                             </div>
                                         </div>
                                     </div>
-                                </ChunkSize>
-                            </BatchSize>
-                        </ActualChunkIndex>
+                                </ChunkSize.Provider>
+                            </BatchSize.Provider>
+                        </ActualChunkIndex.Provider>
                     </ActualTraining.Provider>
                 </ActualStartTime.Provider>
             </ClockCountSeconds.Provider>
