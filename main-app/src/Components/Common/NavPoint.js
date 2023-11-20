@@ -1,16 +1,14 @@
 import React from 'react';
 
-import "../../Styles/NavPoint.css"
+//import "../../Styles/NavPoint.css"
 import {Link} from "react-router-dom";
-import CornerImage from "../Tile/CornerImage";
+
 
 //<img className={"menu-img"} src={logoSrc} alt={"Logo"}/>
-const NavPoint = ({ logoSrc,tooltipContent, content, linkTo }) => {
+const NavPoint = ({ content, linkTo }) => {
     return (
-        <Link to={linkTo} className={"nav-link"}>
-            <div className="nav-point">
-
-                <CornerImage imageUrl={logoSrc} tooltipContent={tooltipContent}/>
+        <Link to={linkTo} className={"nav-link p-4 hover:bg-gray-200k"}>
+            <div className={"text-center"}>
                 <p>{content}</p>
             </div>
         </Link>

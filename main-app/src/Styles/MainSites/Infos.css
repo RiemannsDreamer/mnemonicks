@@ -6,12 +6,5 @@ body {
 }
 
 .infos-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2vw;
-    padding: 7svw;
-    margin: 0 auto;
-    max-width: calc(100% - 10vw);
-
-    background-color: #333;
+    @apply grid grid-cols-4 gap-10 m-20
 }

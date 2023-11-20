@@ -30,26 +30,26 @@ import MnemoMax from "./Components/MainSites/MainMenu/MnemoMax";
 const App = () => {
 
     const headerNavItems = [
-        { content: 'Home', linkTo: '/',logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"Landingpage with all SubApps. Here you can get infos about methods and train your skills with MnemoMax." },
-        { content: 'About', linkTo: '/' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"Infos about the project, the development and the background. Some general infos."},
-        { content: '©MnemoMax', linkTo: '/mnemo-max',logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"©MnemoMax is the trainer app of mnemonicks. With this app you can train several different methods and contents."},
-        { content: 'Docs', linkTo: '/' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"Documentation of this website. This Docs have two parts. First, the Docs about development. Second, the Docs about how to use the components"},
-        { content: 'Contact', linkTo: '/' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"Simple contact form to get in touch with the developers"},
-        { content: 'Forum' , linkTo: '/',logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"In this forum, we can build a solid community around the app. Discuss your questions and feature requests with others"},
+        { content: 'Home', linkTo: '/'},
+        { content: 'About', linkTo: '/' },
+        { content: '©MnemoMax', linkTo: '/mnemo-max'},
+        { content: 'Docs', linkTo: '/' },
+        { content: 'Contact', linkTo: '/'},
+        { content: 'Forum' , linkTo: '/'},
     ];
 
     const footerNavItems = [
-        { content: 'Impressum', linkTo: '/',logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"Standard Impressum of this website" },
-        { content: 'Contact' , linkTo: '/',logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"Simple contact form to get in touch with the developers"},
-        { content: 'Privacy' , linkTo: '/',logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"Privacy Policy of this website"},
-        { content: 'Cookies', linkTo: '/' ,logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"Cookie Policy of this website"},
-        { content: 'Credits' , linkTo: '/',logoSrc:"../../Images/Logos/Numbers.jpg",tooltip:"Some Credits to all the persons who have contributed something to this project."},
+        { content: 'Impressum', linkTo: '/'},
+        { content: 'Contact' , linkTo: '/'},
+        { content: 'Privacy' , linkTo: '/'},
+        { content: 'Cookies', linkTo: '/' },
+        { content: 'Credits' , linkTo: '/'},
 
     ];
 
     return (
         <Router>
-            <div>
+            <div className={"main-whole-site bg-gradient-to-tl from-cyan-400 via-cyan-500 to-cyan-600"}>
                 <Header navItems={headerNavItems} title="Mnemonicks" />
                 <main>
                     <Routes>

@@ -1,22 +1,12 @@
 .corner-image-container {
-    position: relative;
-    display: inline-block;
-    width: 4vw;
-    height: 4vw;
-
 
 }
 
 .corner-image {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.6);
+
 }
 
 
 .corner-image-container:hover .tooltip {
-    display: block;
-    z-index: 1;
+
 }
