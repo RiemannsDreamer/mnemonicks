@@ -5,7 +5,7 @@ import Tile from "../Tile/Tile";
 
 const Home = () => {
     return (
-        <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center"}>
+        <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 m-10 justify-center"}>
 
             <Tile
                 title="Infos"

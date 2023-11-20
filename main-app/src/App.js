@@ -27,6 +27,7 @@ import MnemoMax from "./Components/MainSites/MainMenu/MnemoMax";
 
 // TODO: Commit checkout branch for test
 
+
 const App = () => {
 
     const headerNavItems = [
@@ -49,7 +50,8 @@ const App = () => {
 
     return (
         <Router>
-            <div className={"main-whole-site bg-gradient-to-tl from-cyan-400 via-cyan-500 to-cyan-600"}>
+            <div className={"bg-gradient-to-tr from-cyan-800 via-cyan-500 to-cyan-200"}>
+                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url("./BackgroundWebsite.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
                 <Header navItems={headerNavItems} title="Mnemonicks" />
                 <main>
                     <Routes>
