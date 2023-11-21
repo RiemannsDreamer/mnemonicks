@@ -12,7 +12,7 @@ const Tile = ({title, subtitle, cornerImageUrl, linkTo}) => {
 
                 <img className={"rounded-2xl shadow-2xl"} src={cornerImageUrl}/>
                 <div className={"shadow-2xl text-center rounded-2xl bg-gradient-to-tr from-cyan-600 to-cyan-800"}>
-                    <h3>{title}</h3>
+                    <strong>{title}</strong>
                     <h4>{subtitle}</h4>
                 </div>
             </div>

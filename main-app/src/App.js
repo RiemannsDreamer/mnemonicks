@@ -30,8 +30,9 @@ const App = () => {
 
     const headerNavItems = [
         { content: 'Home', linkTo: '/'},
+        { content: '© MnemoMax', linkTo: '/mnemo-max'},
+        { content: '© PCMPG', linkTo: '/'},
         { content: 'About', linkTo: '/' },
-        { content: '©MnemoMax', linkTo: '/mnemo-max'},
         { content: 'Docs', linkTo: '/' },
         { content: 'Contact', linkTo: '/'},
         { content: 'Forum' , linkTo: '/'},
