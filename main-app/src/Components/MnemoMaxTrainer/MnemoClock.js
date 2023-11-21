@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useContext} from "react";
-import "../../Styles/MainSites/MnemoMax/MnemoClock.css";
+// import "../../Styles/MainSites/MnemoMax/MnemoClock.css";
 
 // Import contexts
 import {LearningIsRunningContext, ClockCountSeconds,ActualStartTime} from "../MainSites/MainMenu/MnemoContexts";
@@ -41,14 +41,17 @@ const MnemoClock = () => {
     const seconds = formatDigit(Math.floor(timeInSeconds % 60));
 
     return (
-        <div className={"mnemo-clock-container"}>
-            <span>{hours}</span>
-            <span style={{margin: "0 4px"}}>:</span>
-            <span>{minutes}</span>
-            <span style={{margin: "0 4px"}}>:</span>
-            <span>{seconds}</span>
-        </div>
+            <div className="flex relative top-0 right-0 m-4">
+                <div className="text-center w-1/4 bg-cyan-950 text-white p-4 rounded-lg shadow-2xl">
+                    <span className="text-3xl">{hours}</span>
+                    <span className="mx-2">:</span>
+                    <span className="text-3xl">{minutes}</span>
+                    <span className="mx-2">:</span>
+                    <span className="text-3xl">{seconds}</span>
+                </div>
+            </div>
     );
+
 };
 
 export default MnemoClock;
