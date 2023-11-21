@@ -7,7 +7,7 @@ import "../../App.css"
 
 const Navigation = ({ navItems}) => {
     return (
-        <div className={"flex justify-center ml-auto space-x-6"}>
+        <div className={"flex justify-center ml-auto space-x-6 mr-10"}>
             <div className={"flex justify-center ml-auto space-x-6"}>
                 {navItems.map((item, index) => (
                     <NavPoint key={index} content={item.content} linkTo={item.linkTo} />
