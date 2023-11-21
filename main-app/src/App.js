@@ -25,8 +25,6 @@ import Vocab from "./Components/MainSites/Vocab";
 
 import MnemoMax from "./Components/MainSites/MainMenu/MnemoMax";
 
-// TODO: Commit checkout branch for test
-
 
 const App = () => {
 
@@ -50,8 +48,7 @@ const App = () => {
 
     return (
         <Router>
-            <div className={"bg-gradient-to-tr from-cyan-800 via-cyan-500 to-cyan-200"}>
-                <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: 'url("./BackgroundWebsite.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+            <div className={"bg-[url('./BackgroundTexture.jpg')] bg-cover bg-center bg-no-repeat bg-fixed opacity-95"}>
                 <Header navItems={headerNavItems} title="Mnemonicks" />
                 <main>
                     <Routes>
