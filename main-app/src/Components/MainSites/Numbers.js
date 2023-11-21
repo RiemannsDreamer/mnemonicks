@@ -2,11 +2,12 @@
 import React from 'react';
 import Tile from "../Tile/Tile";
 
-import "../../Styles/MainSites/Numbers.css"
+//import "../../Styles/MainSites/Numbers.css"
+import "../../Styles/MainSites/Grid_home.css"
 
 const Numbers = () => {
     return (
-        <div className={"numbers-container"}>
+        <div className={"grid-home"}>
             <Tile
                 title="Random"
                 subtitle="Learn random decimals"

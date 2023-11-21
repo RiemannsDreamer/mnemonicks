@@ -2,11 +2,13 @@
 import React from 'react';
 import Tile from "../Tile/Tile";
 
-import "../../Styles/MainSites/Alphabets.css"
+//import "../../Styles/MainSites/Alphabets.css"
+
+import "../../Styles/MainSites/Grid_home.css"
 
 const Alphabets = () => {
     return (
-        <div className={"alphabets-container"}>
+        <div className={"grid-home"}>
             <Tile
                 title="Plants"
                 subtitle="An alphabet with only Plants"

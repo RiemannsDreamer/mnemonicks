@@ -8,7 +8,7 @@ const Footer = ({navItems}) => {
     return (
         <footer className={"footer"}>
             <Navigation navItems={navItems}/>
-            <p className={"text-center"}>&copy; 2023 Mnemonicks. all rights reserved.</p>
+            <p className={"text-center text-white"}>&copy; 2023 Mnemonicks. all rights reserved.</p>
         </footer>
     );
 };

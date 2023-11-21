@@ -1,11 +1,11 @@
 import React from 'react';
 import Tile from "../Tile/Tile";
 
-//import "../../Styles/MainSites/Home.css"
+//import "../../Styles/MainSites/Grid_home.css"
 
 const Home = () => {
     return (
-        <div className={"grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 m-10 justify-center"}>
+        <div className={"grid-home grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 m-10 justify-center"}>
 
             <Tile
                 title="Infos"

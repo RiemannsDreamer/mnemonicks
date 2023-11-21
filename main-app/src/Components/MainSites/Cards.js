@@ -2,11 +2,13 @@
 import React from 'react';
 import Tile from "../Tile/Tile";
 
-import "../../Styles/MainSites/Cards.css"
+//import "../../Styles/MainSites/Cards.css"
+
+import "../../Styles/MainSites/Grid_home.css"
 
 const Cards = () => {
     return (
-        <div className={"cards-container"}>
+        <div className={"grid-home"}>
             <Tile
                 title="52-Poker"
                 subtitle="Learn a poker-set"
