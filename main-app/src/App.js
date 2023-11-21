@@ -48,7 +48,7 @@ const App = () => {
 
     return (
         <Router>
-            <div className={"bg-[url('./AbstractTexture.jpg')] aspect-auto bg-cover bg-center bg-blend-multiply bg-cyan-500"}>
+            <div className={"bg-[url('./AbstractTexture.jpg')] aspect-auto bg-cover  bg-center bg-blend-multiply bg-cyan-500"}>
                 <Header navItems={headerNavItems} title="Mnemonicks" />
                 <main>
                     <Routes>
