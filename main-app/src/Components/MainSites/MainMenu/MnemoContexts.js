@@ -56,3 +56,5 @@ export const ChunkSize = createContext(4)
  * @type {React.Context<string[]>}
  */
 export const ActualBatch = createContext(["Press to Start"])
+
+export const TrainingStatus = createContext("Train")
