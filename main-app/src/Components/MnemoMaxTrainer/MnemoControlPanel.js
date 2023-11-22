@@ -10,6 +10,8 @@ import {ActualChunkIndex} from "../MainSites/MainMenu/MnemoContexts";
 import {ActualBatch} from "../MainSites/MainMenu/MnemoContexts";
 import {ChunkSize, BatchSize} from "../MainSites/MainMenu/MnemoContexts";
 
+import {TrainingStatus} from "../MainSites/MainMenu/MnemoContexts";
+
 import {getRandomNumbersForTraining} from "../MainSites/MainMenu/ComputationsDataGet";
 
 const MnemoControlPanel = () => {
@@ -31,11 +33,14 @@ const MnemoControlPanel = () => {
     const {batchSize, setBatchSize} = useContext(BatchSize)
     const {chunkSize, setChunkSize} = useContext(ChunkSize)
 
+    const {trainingStatus,setTrainingStatus} = useContext(TrainingStatus)
 
     const handleButtonClick = (action) => {
 
         switch (action) {
             case "start":
+                setTrainingStatus("Train")
+
                 setIsLearningRunning(true);
 
                 setBatchSize(15)
@@ -46,6 +51,8 @@ const MnemoControlPanel = () => {
 
                 break;
             case "pause":
+                setTrainingStatus("Pause")
+
                 setIsLearningRunning(false);
                 break;
             case "resume":
@@ -58,9 +65,11 @@ const MnemoControlPanel = () => {
                 setActualChunkIndex(actualChunkIndex + 1)
                 break;
             case "test":
-
+                setTrainingStatus("Test")
                 break;
             case "cancel":
+                setTrainingStatus("DefaultMessage")
+
                 setIsLearningRunning(false);
                 setTimeInSeconds(0);
 
