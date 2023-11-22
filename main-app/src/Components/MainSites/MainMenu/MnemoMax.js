@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState,useEffect,useRef} from "react";
 // import "../../../Styles/MainSites/MnemoMax/MnemoMax.css";
 import MnemoMenu from "../../MnemoMaxTrainer/MnemoMenu";
 import MnemoProgressBar from "../../MnemoMaxTrainer/MnemoProgressBar";
@@ -11,6 +11,8 @@ import {LearningIsRunningContext, ClockCountSeconds, ActualStartTime} from "./Mn
 import {ActualTraining, ActualChunkIndex, BatchSize, ChunkSize} from "./MnemoContexts";
 
 export default function MnemoMax() {
+
+
 
     const menuData = [
         { title: "Edit", items: ["Cut", "Copy", "Paste"] },
@@ -39,16 +41,16 @@ export default function MnemoMax() {
                         <ActualChunkIndex.Provider value={{actualChunkIndex, setActualChunkIndex}}>
                             <BatchSize.Provider value={{batchSize, setBatchSize}}>
                                 <ChunkSize.Provider value={{chunkSize, setChunkSize}}>
-                                    <div className={"h-1/1 w-1/1 m-10 flex flex-col bg-gradient-to-tr from-cyan-700 to-cyan-900 rounded-2xl opacity-80"}>
-                                        <div className={"bg-gradient-to-tr from-cyan-600 to-cyan-900 rounded-2xl opacity-80 m-5"}>
+                                    <div className={"my-auto max-h-full flex flex-col h-screen p-10 m-10 bg-gradient-to-tr from-cyan-700 to-cyan-900 rounded-2xl opacity-80"}>
+                                        <div className={"bg-gradient-to-tr from-cyan-600 to-cyan-900 rounded-2xl opacity-80"}>
                                             <MnemoMenu menuData={menuData} />
                                         </div>
-                                        <div className={"flex flex-row h-4/5"}>
-                                            <div className={"w-1/3 m-10"}>
+                                        <div className={"flex flex-grow"}>
+                                            <div className={"w-1/4 p-5"}>
+                                                <MnemoClock/>
                                                 <MnemoProgressBar/>
                                             </div>
-                                            <div className={"w-2/3 m-10"}>
-                                                <MnemoClock/>
+                                            <div className={"w-3/4 p-10"}>
                                                 <MnemoContent/>
                                                 <MnemoControlPanel/>
                                             </div>

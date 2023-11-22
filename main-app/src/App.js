@@ -23,8 +23,8 @@ import PCMPG from "./Components/MainSites/PCMPG";
 import Pegs from "./Components/MainSites/Pegs";
 import Vocab from "./Components/MainSites/Vocab";
 
-import MnemoMax from "./Components/MainSites/MainMenu/MnemoMax";
-
+// import MnemoMax from "./Components/MainSites/MainMenu/MnemoMax";
+import MainAppSite from "./Components/MainSites/MainMenu/MainAppSite"
 
 const App = () => {
 
@@ -51,7 +51,7 @@ const App = () => {
         <Router>
             <div className={"bg-[url('./AbstractTexture.jpg')] aspect-auto bg-cover  bg-center bg-blend-multiply bg-cyan-500"}>
                 <Header navItems={headerNavItems} title="Mnemonicks" />
-                <main>
+                <main className={"h-full"}>
                     <Routes>
                         <Route path="/" element={<Home />} />
                         <Route path="/infos" element={<Infos />} />
@@ -68,7 +68,7 @@ const App = () => {
                         <Route path="/pegs" element={<Pegs />} />
                         <Route path="/vocab" element={<Vocab />} />
 
-                        <Route path="/mnemo-max" element={<MnemoMax />} />
+                        <Route path="/mnemo-max" element={<MainAppSite/>}/>
                     </Routes>
                 </main>
                 <Footer navItems={footerNavItems} />

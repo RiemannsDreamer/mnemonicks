@@ -6,7 +6,7 @@ import {useState} from "react";
 
 import MnemoButton from "./MnemoButton";
 
-import "../../Styles/MainSites/MnemoMax/MnemoControlPanel.css"
+//import "../../Styles/MainSites/MnemoMax/MnemoControlPanel.css"
 
 import {LearningIsRunningContext,ClockCountSeconds} from "../MainSites/MainMenu/MnemoContexts";
 
@@ -56,8 +56,8 @@ const MnemoControlPanel = () => {
     };
 
     return (
-        <div className="mnemo-control-panel">
-            <div className="mnemo-button-container">
+        <div className="h-1/9 flex items-center justify-center w-full h-20 bg-gradient-to-tr from-cyan-400 to-cyan-800 rounded-2xl m-4">
+            <div className="flex space-x-4">
                 {buttonData.map((button, index) => (
                     <MnemoButton
                         key={index}

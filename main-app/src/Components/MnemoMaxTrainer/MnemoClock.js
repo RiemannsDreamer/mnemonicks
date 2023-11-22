@@ -41,8 +41,8 @@ const MnemoClock = () => {
     const seconds = formatDigit(Math.floor(timeInSeconds % 60));
 
     return (
-            <div className="flex relative top-0 right-0 m-4">
-                <div className="text-center w-1/4 bg-cyan-950 text-white p-4 rounded-lg shadow-2xl">
+            <div className="flex relative w-1/2 mx-auto m-4">
+                <div className="text-center w-full bg-cyan-950 text-white p-4 rounded-lg shadow-2xl">
                     <span className="text-3xl">{hours}</span>
                     <span className="mx-2">:</span>
                     <span className="text-3xl">{minutes}</span>

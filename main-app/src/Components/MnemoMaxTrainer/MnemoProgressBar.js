@@ -1,7 +1,7 @@
 
 import React from "react";
 import ProgressItem from "./ProgressItem";
-import "../../Styles/MainSites/MnemoMax/MnemoProgressBar.css";
+//import "../../Styles/MainSites/MnemoMax/MnemoProgressBar.css";
 
 
 const exampleProgressData = {
@@ -12,7 +12,7 @@ const exampleProgressData = {
 };
 
 
-const exampleProgressItems = Array.from({ length: 20 }, (_, index) => ({
+const exampleProgressItems = Array.from({ length:3 }, (_, index) => ({
     id: index + 1,
     label: `Task ${index + 1}`,
     progress: Math.random() * 100,
@@ -30,11 +30,6 @@ const MnemoProgressBar = () => {
                     <p>Available Time: {exampleProgressData.availableTime}</p>
                 </div>
                 <hr className="progress-divider" />
-            </div>
-            <div className="progress-items">
-                {exampleProgressItems.map((item) => (
-                    <ProgressItem key={item.id} label={item.label} progress={item.progress} />
-                ))}
             </div>
         </div>
     );
