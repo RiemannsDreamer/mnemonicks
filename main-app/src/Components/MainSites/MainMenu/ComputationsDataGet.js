@@ -3,7 +3,12 @@
 export function getRandomNumbersForTraining(amountOfNumbers, chunkSize) {
     let batch = getBatchOfRandomNumbers(amountOfNumbers)
 
-    return chunkingBatch(batch, chunkSize)
+    let chunkedBatch = chunkingBatch(batch, chunkSize)
+    chunkedBatch.push(["END"])
+
+    return chunkedBatch
+
+
 }
 
 

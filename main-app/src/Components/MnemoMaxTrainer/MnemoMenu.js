@@ -1,30 +1,24 @@
+import React, { useState } from "react";
 
-import React from "react";
-import MnemoDropdown from "./MnemoDropdown"; // Stelle sicher, dass der Pfad korrekt ist
+import RecursiveDropdown from "./RecursiveDropdown";
+const MnemoMenu = ({ menuData }) => {
+    const [isOpen, setIsOpen] = useState(false);
 
-import "../../Styles/MainSites/MnemoMax/MnemoMenu.css"
-
-const MnemoMenu = () => {
-    const menuItems = [
-        { title: "Edit", items: ["Cut", "Copy", "Paste"] },
-        { title: "Trainings", items: ["Numbers","Cards","Names","Faces"] },
-        { title: "Settings", items: ["Option A", "Option B", "Option C"] },
-        { title: "File", items: ["Open", "Save", "Download"] },
-        { title: "Sonstiges", items: ["Item 1", "Item 2", "Item 3"] },
-        { title: "Anderes", items: ["Item 1", "Item 2", "Item 3"] }
-    ];
+    const handleToggleClick = () => {
+        setIsOpen(!isOpen);
+    };
 
     return (
-        <div className="menu">
-            {menuItems.map((menuItem, index) => (
-                <MnemoDropdown
+        <div className={"bg-gradient-to-tr from-cyan-600 to-cyan-900 rounded-2xl opacity-80"}>
+            {menuData.map((menuItem, index) => (
+                <RecursiveDropdown
                     key={index}
-                    title={menuItem.title}
-                    items={menuItem.items}
+                    menuData={menuItem}
+                    isOpen={isOpen}
+                    handleToggleClick={handleToggleClick}
                 />
             ))}
         </div>
     );
 };
-
 export default MnemoMenu;

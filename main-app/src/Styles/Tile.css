@@ -1,32 +1,13 @@
 .tile {
-    border: 3px solid #444;
-    border-radius: 15px;
-    padding: 2vw;
-    text-align: center;
-    background-color: #555;
-    transition: transform 0.2s ease-in-out;
 
-    width: 13vw;
-    height: 13vw;
-    position: relative;
-    overflow: visible;
-
-    box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.6);
 }
 
 .tile:hover {
-    transform: translateY(-1vw);
+
 }
 
 .tile-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    color: white;
 
-    margin-top: 10px;
 }
 
 

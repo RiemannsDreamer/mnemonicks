@@ -2,12 +2,14 @@
 import React from 'react';
 import Tile from "../Tile/Tile";
 
-import "../../Styles/MainSites/Infos.css"
+// import "../../App.css"
+//import "../../Styles/MainSites/Infos.css"
+
+import "../../Styles/MainSites/Grid_home.css"
 
 const Infos = () => {
     return (
-        <div className={"infos-container"}>
-            <h1>Someday I will write this all down</h1>
+        <div className={"grid-home"}>
             <Tile
                 title="Web-Reference"
                 subtitle="Some (good) references"

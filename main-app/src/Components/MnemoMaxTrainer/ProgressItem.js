@@ -1,6 +1,6 @@
 
 import React from "react";
-import "../../Styles/MainSites/MnemoMax/ProgressItem.css";
+// import "../../Styles/MainSites/MnemoMax/ProgressItem.css";
 
 const ProgressBarItem = ({ label, progress }) => {
     return (

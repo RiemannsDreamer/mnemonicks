@@ -1,34 +1,19 @@
 
 .nav-point {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #555;
-    padding: 8px;
-    margin: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    width: 12vw;
-    height: 4vw;
 
-
-    box-shadow: 2px 10px 15px rgba(0, 0, 0, 0.6);
 }
 
 .nav-point img
 {
-    float:left;
-    margin-right: 10px;
 }
 
 .nav-point p {
-    margin-left: 30px;
+
 }
 
 /* NavPoint.css */
 
 .nav-link {
-    color: white; /* Textfarbe auf Weiß setzen */
-    text-decoration: none; /* Unterstreichung entfernen */
+
 }
 

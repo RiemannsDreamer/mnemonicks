@@ -1,14 +1,16 @@
 // Navigation.js
 import React from 'react';
 import NavPoint from './NavPoint';
-import "../../Styles/Navigation.css"
+//import "../../Styles/Navigation.css"
+
+import "../../App.css"
 
 const Navigation = ({ navItems}) => {
     return (
-        <div className="navigation-container">
-            <div className="navigation-bar">
+        <div className={"flex justify-center ml-auto space-x-6 mr-10"}>
+            <div className={"flex justify-center ml-auto space-x-6"}>
                 {navItems.map((item, index) => (
-                    <NavPoint key={index} logoSrc={item.logoSrc} tooltipContent={item.tooltip} content={item.content} linkTo={item.linkTo} />
+                    <NavPoint key={index} content={item.content} linkTo={item.linkTo} />
                 ))}
             </div>
         </div>

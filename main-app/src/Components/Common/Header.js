@@ -5,20 +5,19 @@ import "../../Styles/Header.css"
 
 const Header = ({ navItems, title }) => {
     return (
-        <header className="header">
-            <div className="logo">
-                <img className="logo-img" src="../../Images/Logos/Main_Logo.jpg" alt="Logo" />
+        <header id={"header"} className="header">
+            <div className="flex items-center justify-between">
+                <img className="logo-img m-5 shadow-2xl opacity-60" src="../../Images/Logos/Main_Logo.jpg" alt="Logo" />
+                <div className={"text-center text-center mx-auto"}>
+                    <h1 className={"text-center text-white text-5xl"}>{title}</h1>
+                    <strong className={"text-center text-white text-3xl"}>Learn how to memorize everything!</strong>
+                </div>
             </div>
             <div className="header-content">
 
                 <Navigation navItems={navItems} />
             </div>
-            <div className="title">
-                <h1>{title}</h1>
-                <h4>This Website is under CONSTRUCTION:</h4>
-                <h4>Use at your own risk!</h4>
-                <strong>Learn how to memorize everything!</strong>
-            </div>
+
         </header>
     );
 };

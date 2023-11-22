@@ -31,7 +31,7 @@ export const ActualStartTime = createContext(0)
  * Example: actualTraining = "numbers" => you're learning numbers
  * @type {React.Context<string>}
  */
-export const ActualTraining = createContext("numbers")
+export const ActualTraining = createContext("Numbers")
 
 /**
  * Index of the actual chunk which is displayd in content component.
@@ -43,10 +43,16 @@ export const ActualChunkIndex = createContext(0)
  * Total size of the data to lean in training.
  * @type {React.Context<number>}
  */
-export const BatchSize = createContext(0)
+export const BatchSize = createContext(13)
 
 /**
  * Size of one single chunk. Only one chunk is displayed in content actually
  * @type {React.Context<number>}
  */
-export const ChunkSize = createContext(0)
+export const ChunkSize = createContext(4)
+
+/**
+ * Holds the actual batch of information. Is an Array of Chunks. (2D)
+ * @type {React.Context<string[]>}
+ */
+export const ActualBatch = createContext(["Press to Start"])
