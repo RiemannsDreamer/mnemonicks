@@ -39,16 +39,17 @@ const MnemoControlPanel = () => {
 
         switch (action) {
             case "start":
+                setIsLearningRunning(false)
+
                 setTrainingStatus("Train")
 
-                setIsLearningRunning(true);
-
-                setBatchSize(15)
-                setChunkSize(3)
+                setBatchSize(34)
+                setChunkSize(6)
 
                 setActualBatch(getRandomNumbersForTraining(batchSize, chunkSize));
                 setActualChunkIndex(0);
 
+                setIsLearningRunning(true);
                 break;
             case "pause":
                 setTrainingStatus("Pause")

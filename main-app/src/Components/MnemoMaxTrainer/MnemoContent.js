@@ -5,6 +5,7 @@ import {ActualBatch, ActualChunkIndex, ClockCountSeconds, TrainingStatus} from "
 
 import MnemoTest from "./MnemoTest";
 import MnemoResult from "./MnemoResult";
+import MnemoTrain from "./MnemoTrain";
 
 const MnemoContent = () => {
 
@@ -14,11 +15,6 @@ const MnemoContent = () => {
 
     const {trainingStatus, setTrainingStatus} = useContext(TrainingStatus)
 
-    let isTrainingVisible = false
-    let isTestVisible = false
-    let isResultVisible = false
-
-    let isDefaultMessageVisible = false
 
     return (
 
@@ -26,7 +22,7 @@ const MnemoContent = () => {
 
             {trainingStatus === "DefaultMessage" && <strong className={"text-white text-4xl"}>Press button to start.</strong>}
 
-            {trainingStatus === "Train" && <p className={"text-center text-white text-4xl"}>{actualBatch[actualChunkIndex]}</p>}
+            {trainingStatus === "Train" && <MnemoTrain/>}
             {trainingStatus === "Pause" && <p className={"text-center text-white text-4xl"}>PAUSE...</p>}
             {trainingStatus === "Test" && <MnemoTest/>}
             {trainingStatus === "Result" && <MnemoResult/>}
