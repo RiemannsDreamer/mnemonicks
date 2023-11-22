@@ -30,7 +30,7 @@
         const [actualChunkIndex, setActualChunkIndex] = useState(0)
 
         const [batchSize, setBatchSize] = useState(15)
-        const [chunkSize, setChunkSize] = useState(3)
+        const [chunkSize, setChunkSize] = useState(4)
 
         const [actualBatch,setActualBatch] = useState(["Press to Start"])
 

@@ -39,14 +39,10 @@ const MnemoControlPanel = () => {
                 setIsLearningRunning(true);
 
                 setBatchSize(15)
-                setChunkSize(4)
+                setChunkSize(3)
 
                 setActualBatch(getRandomNumbersForTraining(batchSize, chunkSize));
                 setActualChunkIndex(0);
-
-                console.log("numbers: " + getRandomNumbersForTraining(batchSize, chunkSize))
-                console.log("batch size: " + batchSize)
-                console.log("chunk size: " + chunkSize)
 
                 break;
             case "pause":
