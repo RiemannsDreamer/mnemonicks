@@ -143,7 +143,7 @@ console.log(eValue.substring(0,102));
 
 
 
-// TODO: BUg in phi
+// TODO: Bug in phi
 /* Computation of Phi (golden ratio)*/
 
 
