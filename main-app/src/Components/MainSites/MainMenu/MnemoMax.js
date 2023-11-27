@@ -16,11 +16,12 @@ export default function MnemoMax() {
 
 
     const menuData = [
-        {title: "Edit", items: ["Cut", "Copy", "Paste"]},
-        {title: "Trainings", items: ["Numbers", "Cards", "Names", "Faces"]},
-        {title: "Settings", items: ["Option A", "Option B", "Option C"]},
-        {title: "File", items: ["Open", "Save", "Download"]},
-        {title: "Sonstiges", items: ["Item 1", "Item 2", "Item 3"]},
+        {title: "Numbers", items: ["Random Decimal", "Random Binary", "Special"]},
+        {title: "Cards", items: ["52er", "36er", "32er"]},
+        {title: "Names", items: ["Random", "Text", "Images"]},
+        {title: "Alphabets", items: ["Tiere", "Gemüse", "Fahrzeuge","Werkzeuge","Sportarten"]},
+        {title: "Routes", items: ["Text", "Image", "?"]},
+        {title: "Rooms", items: ["Random", "Thematic", "Mind Palaces"]},
     ];
 
     const [isLearningRunning, setIsLearningRunning] = useState(false);
