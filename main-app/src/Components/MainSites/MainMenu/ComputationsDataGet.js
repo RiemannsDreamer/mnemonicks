@@ -14,12 +14,18 @@ export function getRandomNumbersForTraining(amountOfNumbers, chunkSize) {
 
 }
 
+export function unChunkingBatch(batch) {
+
+    batch = Object.values(batch)
+
+    return batch.flat();
+}
 
 function chunkingBatch(batch, chunkSize) {
     let chunkedBatch = []
 
     let amountOfFullChunks = Math.floor(batch.length / chunkSize)
-    let amountForRestChunk = batch.length - amountOfFullChunks*chunkSize
+    let amountForRestChunk = batch.length - amountOfFullChunks * chunkSize
 
 
     for (let i = 0; i < amountOfFullChunks; i++) {
@@ -32,17 +38,15 @@ function chunkingBatch(batch, chunkSize) {
         chunkedBatch.push(actualChunk)
     }
 
-    if(amountForRestChunk !== 0)
-    {
+    if (amountForRestChunk !== 0) {
         let restChunk = []
 
         for (let k = 0; k < amountForRestChunk; k++) {
-            restChunk.push(batch[-k+1])
+            restChunk.push(batch[-k + 1])
         }
 
         chunkedBatch.push(restChunk)
     }
-
 
 
     return chunkedBatch
@@ -63,7 +67,11 @@ function getRandomInt(x, y) {
 }
 
 
+
+
+
 /* Special Numbers computations */
+
 // Pi
 
 
@@ -88,7 +96,7 @@ function calculatePiDigitBBP(n) {
 }
 
 export function calculatePi(precision) {
-    Decimal.set({ precision: precision + 5}); // Setze die Dezimalstellen auf precision + 2 (für zusätzliche Genauigkeit)
+    Decimal.set({precision: precision + 5}); // Setze die Dezimalstellen auf precision + 2 (für zusätzliche Genauigkeit)
 
     const pi = calculatePiDigitBBP(precision);
 
@@ -120,7 +128,7 @@ function calculateEDigitBBP(n) {
 }
 
 export function calculateE(precision) {
-    Decimal.set({ precision: precision + 10 });
+    Decimal.set({precision: precision + 10});
 
     const e = calculateEDigitBBP(precision);
 
@@ -144,7 +152,7 @@ function calculatePhiDigitBBP(n) {
 }
 
 export function calculatePhi(precision) {
-    Decimal.set({ precision: precision + 2 });
+    Decimal.set({precision: precision + 2});
 
     const phi = calculatePhiDigitBBP(precision);
 

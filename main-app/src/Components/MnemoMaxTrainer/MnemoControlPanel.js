@@ -12,7 +12,7 @@ import {ChunkSize, BatchSize} from "../MainSites/MainMenu/MnemoContexts";
 
 import {TrainingStatus} from "../MainSites/MainMenu/MnemoContexts";
 
-import {getRandomNumbersForTraining} from "../MainSites/MainMenu/ComputationsDataGet";
+import {getRandomNumbersForTraining, unChunkingBatch} from "../MainSites/MainMenu/ComputationsDataGet";
 
 const MnemoControlPanel = () => {
     const buttonData = [
@@ -43,7 +43,7 @@ const MnemoControlPanel = () => {
 
                 setTrainingStatus("Train")
 
-                setBatchSize(34)
+                setBatchSize(104)
                 setChunkSize(6)
 
                 setActualBatch(getRandomNumbersForTraining(batchSize, chunkSize));
@@ -67,6 +67,7 @@ const MnemoControlPanel = () => {
                 break;
             case "test":
                 setTrainingStatus("Test")
+                setActualBatch(unChunkingBatch(actualBatch))
                 break;
             case "cancel":
                 setTrainingStatus("DefaultMessage")
