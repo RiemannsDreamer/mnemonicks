@@ -9,7 +9,6 @@ const MnemoTest = () => {
 
     const {actualBatch, setActualBatch} = useContext(ActualBatch)
 
-    // Annahme: actualBatch ist ein Array von Zahlen
     const [eingaben, setEingaben] = useState(Array(actualBatch.length).fill(''));
 
     const handleInputChange = (index, value) => {
@@ -39,7 +38,7 @@ const MnemoTest = () => {
                 ))}
             </div>
 
-            {/* Beispiel für einen "OK"-Button zum Überprüfen der Eingaben */}
+
             <button onClick={pruefeEingabe} className={"w-20 h-10 bg-gradient-to-tr from-cyan-400 to-cyan-800 rounded-2xl m-5"}>Check</button>
         </div>
     )
