@@ -19,7 +19,7 @@ const MnemoContent = () => {
 
 
     return (
-        <div className="max-h-5/6 w-full h-5/6 bg-gradient-to-tr from-cyan-500 to-cyan-900 rounded-2xl m-4 text-center flex items-center justify-center">
+        <div className="max-h-5/6 w-full h-5/6 bg-gradient-to-tr from-cyan-500 to-cyan-900 rounded-2xl m-4 text-center  flex items-center justify-center">
 
             {trainingStatus === "DefaultMessage" && <strong className={"text-white text-4xl"}>Press button to start.</strong>}
 

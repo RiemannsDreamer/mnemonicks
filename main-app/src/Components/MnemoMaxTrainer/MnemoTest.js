@@ -2,12 +2,14 @@ import React, {useContext} from "react";
 import {useState} from "react";
 
 import {unChunkingBatch} from "../MainSites/MainMenu/ComputationsDataGet";
-import {ActualBatch} from "../MainSites/MainMenu/MnemoContexts";
+import {ActualBatch, ResultBatch, TrainingStatus} from "../MainSites/MainMenu/MnemoContexts";
 
 
 const MnemoTest = () => {
 
     const {actualBatch, setActualBatch} = useContext(ActualBatch)
+    const {trainingStatus,setTrainingStatus} = useContext(TrainingStatus)
+    const {resultBatch,setResultBatch} = useContext(ResultBatch)
 
     const [eingaben, setEingaben] = useState(Array(actualBatch.length).fill(''));
 
@@ -18,18 +20,29 @@ const MnemoTest = () => {
     };
 
     const pruefeEingabe = () => {
-        // Hier kannst du die Logik für die Überprüfung der Eingaben implementieren
-        console.log('Eingaben überprüfen:', eingaben);
+
+        setResultBatch(eingaben)
+
+        const newActualBatch = [...actualBatch];
+        const newResultBatch = [...resultBatch];
+        newActualBatch.pop();
+        newResultBatch.pop();
+        setActualBatch(newActualBatch);
+        setResultBatch(newResultBatch);
+
+        console.log("batch "+actualBatch)
+
+        setTrainingStatus("Result")
     };
 
     return (
 
         <div className={"w-5/6 h-4/6"}>
-            <div className="max-h-full h-5/6 w-full grid grid-cols-10 grid-rows-4 gap-3 overflow-scroll">
+            <div className="max-h-50 h-40 w-full grid grid-cols-10 gap-3 overflow-scroll    ">
                 {actualBatch.map((number, index) => (
                     <div key={index}>
                         <input
-                            type="text"
+                            type="number"
                             className="w-10 h-10 border border-solid border-white opacity-80 bg-gradient-to-br from-cyan-500 to-cyan-700 text-center"
                             value={eingaben[index]}
                             onChange={(e) => handleInputChange(index, e.target.value)}
@@ -45,3 +58,5 @@ const MnemoTest = () => {
 }
 
 export default MnemoTest
+
+

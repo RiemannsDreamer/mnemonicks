@@ -58,3 +58,5 @@ export const ChunkSize = createContext(4)
 export const ActualBatch = createContext(["Press to Start"])
 
 export const TrainingStatus = createContext("DefaultMessage")
+
+export const ResultBatch = createContext([])

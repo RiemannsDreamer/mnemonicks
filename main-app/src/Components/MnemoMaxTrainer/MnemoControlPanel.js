@@ -43,8 +43,8 @@ const MnemoControlPanel = () => {
 
                 setTrainingStatus("Train")
 
-                setBatchSize(104)
-                setChunkSize(6)
+                setBatchSize(10)
+                setChunkSize(3)
 
                 setActualBatch(getRandomNumbersForTraining(batchSize, chunkSize));
                 setActualChunkIndex(0);
