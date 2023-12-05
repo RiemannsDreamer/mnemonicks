@@ -16,7 +16,6 @@ export function getRandomNumbersForTraining(amountOfNumbers, chunkSize) {
 
 export function unChunkingBatch(batch) {
 
-    batch = Object.values(batch)
 
     return batch.flat();
 }

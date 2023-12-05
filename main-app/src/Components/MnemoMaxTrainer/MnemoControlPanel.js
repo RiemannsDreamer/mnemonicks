@@ -5,7 +5,7 @@ import MnemoButton from "./MnemoButton";
 
 //import "../../Styles/MainSites/MnemoMax/MnemoControlPanel.css"
 
-import {LearningIsRunningContext, ClockCountSeconds} from "../MainSites/MainMenu/MnemoContexts";
+import {LearningIsRunningContext, ClockCountSeconds, ResultBatch} from "../MainSites/MainMenu/MnemoContexts";
 import {ActualChunkIndex} from "../MainSites/MainMenu/MnemoContexts";
 import {ActualBatch} from "../MainSites/MainMenu/MnemoContexts";
 import {ChunkSize, BatchSize} from "../MainSites/MainMenu/MnemoContexts";
@@ -28,7 +28,9 @@ const MnemoControlPanel = () => {
     const {isLearningRunning, setIsLearningRunning} = useContext(LearningIsRunningContext);
     const {timeInSeconds, setTimeInSeconds} = useContext(ClockCountSeconds);
     const {actualChunkIndex, setActualChunkIndex} = useContext(ActualChunkIndex)
+
     const {actualBatch, setActualBatch} = useContext(ActualBatch)
+    const {resultBatch,setResultBatch} = useContext(ResultBatch)
 
     const {batchSize, setBatchSize} = useContext(BatchSize)
     const {chunkSize, setChunkSize} = useContext(ChunkSize)
@@ -41,12 +43,16 @@ const MnemoControlPanel = () => {
             case "start":
                 setIsLearningRunning(false)
 
+                setTimeInSeconds(-3)
+
                 setTrainingStatus("Train")
 
                 setBatchSize(10)
                 setChunkSize(3)
 
-                setActualBatch(getRandomNumbersForTraining(batchSize, chunkSize));
+                const newActualBatch = [...getRandomNumbersForTraining(batchSize, chunkSize)]
+                setActualBatch(newActualBatch);
+
                 setActualChunkIndex(0);
 
                 setIsLearningRunning(true);
@@ -57,6 +63,7 @@ const MnemoControlPanel = () => {
                 setIsLearningRunning(false);
                 break;
             case "resume":
+                setTrainingStatus("Train")
                 setIsLearningRunning(true);
                 break;
             case "previous":
@@ -66,8 +73,23 @@ const MnemoControlPanel = () => {
                 setActualChunkIndex(actualChunkIndex + 1)
                 break;
             case "test":
+
+                const unchunkedBatch = [...unChunkingBatch(actualBatch)]
+
+                setActualBatch(unchunkedBatch)
+
+                const actualBatchToPop = [...actualBatch];
+                actualBatchToPop.pop();
+                setActualBatch(actualBatchToPop);
+
+
+                setIsLearningRunning(false);
+
+                console.log(actualBatch)
+
                 setTrainingStatus("Test")
-                setActualBatch(unChunkingBatch(actualBatch))
+
+                console.log(actualBatch)
                 break;
             case "cancel":
                 setTrainingStatus("DefaultMessage")
