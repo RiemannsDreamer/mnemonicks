@@ -38,7 +38,7 @@ const MnemoClock = () => {
         return () => {
             clearInterval(intervalId);
         };
-    }, [isLearningRunning, setTimeInSeconds]);
+    }, [trainingStatus, setTimeInSeconds]);
 
     const formatDigit = (digit) => (digit < 10 ? `0${digit}` : digit);
 

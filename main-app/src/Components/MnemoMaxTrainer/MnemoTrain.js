@@ -1,5 +1,10 @@
 import React, {useContext, useEffect, useState} from "react";
-import {ActualBatch, ActualChunkIndex, LearningIsRunningContext} from "../MainSites/MainMenu/MnemoContexts";
+import {
+    ActualBatch,
+    ActualChunkIndex,
+    LearningIsRunningContext,
+    TrainingStatus
+} from "../MainSites/MainMenu/MnemoContexts";
 
 
 
@@ -9,11 +14,12 @@ const MnemoTrain = () => {
     const {actualChunkIndex, setActualChunkIndex} = useContext(ActualChunkIndex)
 
     const {isLearningRunning,setIsLearningRunning} = useContext(LearningIsRunningContext)
+    const {trainingStatus,setTrainingStatus} = useContext(TrainingStatus)
 
     const [countdown, setCountdown] = useState(3);
 
     useEffect(() => {
-        if (isLearningRunning && countdown > 0) {
+        if ((trainingStatus === "Train") && countdown > 0) {
             const countdownInterval = setInterval(() => {
                 setCountdown((prevCountdown) => prevCountdown - 1);
             }, 1000);
@@ -21,10 +27,10 @@ const MnemoTrain = () => {
             return () => {
                 clearInterval(countdownInterval);
             };
-        } else if (!isLearningRunning) {
+        } else if (!(trainingStatus === "Train")) {
             setCountdown(5);
         }
-    }, [countdown, isLearningRunning]);
+    }, [countdown, trainingStatus]);
 
     return (
         <div>
