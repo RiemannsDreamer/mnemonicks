@@ -2,22 +2,13 @@ import React, {useState, useEffect, useContext} from "react";
 // import "../../Styles/MainSites/MnemoMax/MnemoClock.css";
 
 // Import contexts
-import {
-    LearningIsRunningContext,
-    ClockCountSeconds,
-    ActualStartTime,
-    TrainingStatus, AppState
+import {AppState
 } from "../MainSites/MainMenu/MnemoContexts";
 import App from "../../App";
 
 const MnemoClock = () => {
-    const {isLearningRunning, setIsLearningRunning} = useContext(LearningIsRunningContext);
-    const {trainingStatus,setTrainingStatus} = useContext(TrainingStatus)
-    const {timeInSeconds, setTimeInSeconds} = useContext(ClockCountSeconds);
-    let {actualStartTime,setActualStartTime} = useContext(ActualStartTime)
 
     const {appState,setAppState} = useContext(AppState)
-
 
     let intervalId;
     useEffect(() => {

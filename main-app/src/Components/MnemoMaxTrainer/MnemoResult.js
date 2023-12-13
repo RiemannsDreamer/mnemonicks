@@ -1,20 +1,10 @@
 import React, {useContext, useEffect, useState} from "react";
 import {
-    ActualBatch,
-    AppState,
-    ClockCountSeconds,
-    ResultBatch,
-    TrainingStatus
+    AppState
 } from "../MainSites/MainMenu/MnemoContexts";
 
 
 const MnemoResult = () => {
-
-    const {timeInSeconds, setTimeInSeconds} = useContext(ClockCountSeconds)
-    const {actualBatch, setActualBatch} = useContext(ActualBatch)
-    const {resultBatch, setResultBatch} = useContext(ResultBatch)
-
-    const {trainingStatus, setTrainingStatus} = useContext(TrainingStatus)
 
     const [accuracy, setAccuracy] = useState(0)
 

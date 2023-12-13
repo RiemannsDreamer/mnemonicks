@@ -3,11 +3,7 @@ import React, {useCallback, useContext, useEffect} from "react";
 
 
 import {
-    ActualBatch,
-    ActualChunkIndex,
-    AppState,
-    ClockCountSeconds,
-    TrainingStatus
+    AppState
 } from "../MainSites/MainMenu/MnemoContexts";
 
 import MnemoTest from "./MnemoTest";
@@ -17,16 +13,7 @@ import App from "../../App";
 
 const MnemoContent = () => {
 
-    const {timeInSeconds, setTimeInSeconds} = useContext(ClockCountSeconds);
-    const {actualBatch, setActualBatch} = useContext(ActualBatch)
-    const {actualChunkIndex, setActualChunkIndex} = useContext(ActualChunkIndex)
-
-
-    const {trainingStatus, setTrainingStatus} = useContext(TrainingStatus)
-
-    // TODO: altered
     const {appState,setAppState} = useContext(AppState)
-
 
     return (
         <div className="max-h-5/6 w-full h-5/6 bg-gradient-to-tr from-cyan-500 to-cyan-900 rounded-2xl m-4 text-center  flex items-center justify-center">

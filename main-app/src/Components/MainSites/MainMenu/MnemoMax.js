@@ -7,17 +7,8 @@ import MnemoContent from "../../MnemoMaxTrainer/MnemoContent";
 import MnemoControlPanel from "../../MnemoMaxTrainer/MnemoControlPanel";
 
 // Context import
-import {
-    LearningIsRunningContext,
-    ClockCountSeconds,
-    ActualStartTime,
-    ActualBatch,
-    ResultBatch,
-    AppState
-} from "./MnemoContexts";
-import {ActualTraining, ActualChunkIndex, BatchSize, ChunkSize} from "./MnemoContexts";
+import {AppState} from "./MnemoContexts";
 
-import {TrainingStatus} from "./MnemoContexts";
 
 export default function MnemoMax() {
 
@@ -31,24 +22,6 @@ export default function MnemoMax() {
         {title: "Rooms", items: ["Random", "Thematic", "Mind Palaces"]},
     ];
 
-    const [isLearningRunning, setIsLearningRunning] = useState(false);
-    const [timeInSeconds, setTimeInSeconds] = useState(0);
-    const [actualStartTime, setActualStartTime] = useState(0)
-
-    // states for management of displayed content
-    const [actualTraining, setActualTraining] = useState("Numbers")
-    const [actualChunkIndex, setActualChunkIndex] = useState(0)
-
-    const [batchSize, setBatchSize] = useState(45)
-    const [chunkSize, setChunkSize] = useState(10)
-
-    const [actualBatch, setActualBatch] = useState(["Press to Start"])
-
-    const [trainingStatus, setTrainingStatus] = useState("DefaultMessage")
-
-    const [resultBatch, setResultBatch] = useState([])
-
-    // TODO: Use only one Context
     const [appState, setAppState] = useState({
         trainingStatus: "DefaultMessage",
 
@@ -64,46 +37,25 @@ export default function MnemoMax() {
 
     })
 
-
     return (
         <AppState.Provider value={{appState, setAppState}}>
-            <ResultBatch.Provider value={{resultBatch, setResultBatch}}>
-                <LearningIsRunningContext.Provider value={{isLearningRunning, setIsLearningRunning}}>
-                    <ClockCountSeconds.Provider value={{timeInSeconds, setTimeInSeconds}}>
-                        <ActualStartTime.Provider value={{actualStartTime, setActualStartTime}}>
-                            <ActualTraining.Provider value={{actualTraining, setActualTraining}}>
-                                <ActualChunkIndex.Provider value={{actualChunkIndex, setActualChunkIndex}}>
-                                    <BatchSize.Provider value={{batchSize, setBatchSize}}>
-                                        <ChunkSize.Provider value={{chunkSize, setChunkSize}}>
-                                            <ActualBatch.Provider value={{actualBatch, setActualBatch}}>
-                                                <TrainingStatus.Provider value={{trainingStatus, setTrainingStatus}}>
-                                                    <div
-                                                        className={"my-auto max-h-full flex flex-col h-screen p-10 m-10 bg-gradient-to-tr from-cyan-700 to-cyan-900 rounded-2xl opacity-80"}>
-                                                        <div
-                                                            className={"bg-gradient-to-tr from-cyan-600 to-cyan-900 rounded-2xl opacity-80"}>
-                                                            <MnemoMenu menuData={menuData}/>
-                                                        </div>
-                                                        <div className={"flex flex-grow"}>
-                                                            <div className={"w-1/4 p-5"}>
-                                                                <MnemoClock/>
-                                                                <MnemoProgressBar/>
-                                                            </div>
-                                                            <div className={"w-3/4 p-10"}>
-                                                                <MnemoContent/>
-                                                                <MnemoControlPanel/>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </TrainingStatus.Provider>
-                                            </ActualBatch.Provider>
-                                        </ChunkSize.Provider>
-                                    </BatchSize.Provider>
-                                </ActualChunkIndex.Provider>
-                            </ActualTraining.Provider>
-                        </ActualStartTime.Provider>
-                    </ClockCountSeconds.Provider>
-                </LearningIsRunningContext.Provider>
-            </ResultBatch.Provider>
+            <div
+                className={"my-auto max-h-full flex flex-col h-screen p-10 m-10 bg-gradient-to-tr from-cyan-700 to-cyan-900 rounded-2xl opacity-80"}>
+                <div
+                    className={"bg-gradient-to-tr from-cyan-600 to-cyan-900 rounded-2xl opacity-80"}>
+                    <MnemoMenu menuData={menuData}/>
+                </div>
+                <div className={"flex flex-grow"}>
+                    <div className={"w-1/4 p-5"}>
+                        <MnemoClock/>
+                        <MnemoProgressBar/>
+                    </div>
+                    <div className={"w-3/4 p-10"}>
+                        <MnemoContent/>
+                        <MnemoControlPanel/>
+                    </div>
+                </div>
+            </div>
         </AppState.Provider>
     );
 }

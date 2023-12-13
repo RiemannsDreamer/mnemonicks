@@ -1,17 +1,12 @@
 import React, {useContext, useEffect} from "react";
 import {useState} from "react";
 
-import {unChunkingBatch} from "../MainSites/MainMenu/ComputationsDataGet";
-import {ActualBatch, AppState, ResultBatch, TrainingStatus} from "../MainSites/MainMenu/MnemoContexts";
+import { AppState} from "../MainSites/MainMenu/MnemoContexts";
 
 
 const MnemoTest = () => {
 
-    const {actualBatch, setActualBatch} = useContext(ActualBatch)
-    const {trainingStatus,setTrainingStatus} = useContext(TrainingStatus)
-    const {resultBatch,setResultBatch} = useContext(ResultBatch)
-
-    const [eingaben, setEingaben] = useState(Array(actualBatch.length).fill(''));
+    const [eingaben, setEingaben] = useState(Array(appState.actualBatch.length).fill(''));
 
     const {appState, setAppState} = useContext(AppState)
 

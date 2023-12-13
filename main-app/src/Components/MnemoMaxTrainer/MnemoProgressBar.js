@@ -1,6 +1,5 @@
 
 import React from "react";
-import ProgressItem from "./ProgressItem";
 //import "../../Styles/MainSites/MnemoMax/MnemoProgressBar.css";
 
 
@@ -24,6 +23,7 @@ const MnemoProgressBar = () => {
             <div className="progress-info">
                 <strong>Progress</strong>
                 <div className="progress-data">
+                    <p>STATIC INFO dev</p>
                     <p>Relative: {exampleProgressData.relative}%</p>
                     <p>Absolute: {exampleProgressData.absolute} tasks</p>
                     <p>Past Time: {exampleProgressData.pastTime}</p>

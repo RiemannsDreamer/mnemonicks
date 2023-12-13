@@ -5,12 +5,7 @@ import MnemoButton from "./MnemoButton";
 
 //import "../../Styles/MainSites/MnemoMax/MnemoControlPanel.css"
 
-import {LearningIsRunningContext, ClockCountSeconds, ResultBatch, AppState} from "../MainSites/MainMenu/MnemoContexts";
-import {ActualChunkIndex} from "../MainSites/MainMenu/MnemoContexts";
-import {ActualBatch} from "../MainSites/MainMenu/MnemoContexts";
-import {ChunkSize, BatchSize} from "../MainSites/MainMenu/MnemoContexts";
-
-import {TrainingStatus} from "../MainSites/MainMenu/MnemoContexts";
+import { AppState} from "../MainSites/MainMenu/MnemoContexts";
 
 import {getRandomNumbersForTraining, unChunkingBatch} from "../MainSites/MainMenu/ComputationsDataGet";
 import App from "../../App";
@@ -25,18 +20,6 @@ const MnemoControlPanel = () => {
         {title: "Test", action: "test"},
         {title: "Cancel", action: "cancel"},
     ];
-
-    const {isLearningRunning, setIsLearningRunning} = useContext(LearningIsRunningContext);
-    const {timeInSeconds, setTimeInSeconds} = useContext(ClockCountSeconds);
-    const {actualChunkIndex, setActualChunkIndex} = useContext(ActualChunkIndex)
-
-
-    const {batchSize, setBatchSize} = useContext(BatchSize)
-    const {chunkSize, setChunkSize} = useContext(ChunkSize)
-
-    const {actualBatch, setActualBatch} = useContext(ActualBatch)
-    const {resultBatch, setResultBatch} = useContext(ResultBatch)
-    const {trainingStatus, setTrainingStatus} = useContext(TrainingStatus)
 
     const {appState, setAppState} = useContext(AppState)
 

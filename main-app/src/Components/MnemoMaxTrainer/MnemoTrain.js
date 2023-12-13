@@ -1,21 +1,14 @@
 import React, {useContext, useEffect, useState} from "react";
 import {
-    ActualBatch,
-    ActualChunkIndex, AppState,
-    LearningIsRunningContext,
-    TrainingStatus
+AppState
+
 } from "../MainSites/MainMenu/MnemoContexts";
-import App from "../../App";
+
 
 
 
 
 const MnemoTrain = () => {
-    const {actualBatch, setActualBatch} = useContext(ActualBatch)
-    const {actualChunkIndex, setActualChunkIndex} = useContext(ActualChunkIndex)
-
-    const {isLearningRunning,setIsLearningRunning} = useContext(LearningIsRunningContext)
-    const {trainingStatus,setTrainingStatus} = useContext(TrainingStatus)
 
     const {appState,setAppState} = useContext(AppState)
 
