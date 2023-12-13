@@ -14,7 +14,6 @@ export const AppState = createContext({
     trainingStatus: "DefaultMessage",
 
     clockCountSeconds: 0,
-    actualStartTime: 0,
 
     batchSize: 0,
     chunkSize: 0,

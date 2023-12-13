@@ -23,13 +23,25 @@ const MnemoControlPanel = () => {
 
     const {appState, setAppState} = useContext(AppState)
 
+    useEffect(() => {
+        console.log(appState);
+
+        // Cleanup-Funktion: wird ausgeführt, wenn die Komponente demontiert wird
+        return () => {
+            console.log('Component unmounted');
+        };
+    }, [appState]);
+
     const handleButtonClick = (action) => {
 
         switch (action) {
             case "start":
 
                 let newActualBatch = getRandomNumbersForTraining(appState.batchSize, appState.chunkSize)
+                console.log(appState.batchSize, appState.chunkSize)
+                console.log(newActualBatch)
 
+                /*
                 let newAppState = {
                     trainingStatus: "Train",
 
@@ -43,6 +55,20 @@ const MnemoControlPanel = () => {
                 }
 
                 setAppState(newAppState)
+
+                 */
+                setAppState((previous) => ({
+                    ...previous,
+                    clockCountSeconds: -3,
+                    actualStartTime: 0,
+
+                    actualChunkIndex: 0,
+
+                    actualBatch: newActualBatch,
+                    resultBatch: [],
+
+                    trainingStatus: "Train",
+                }));
 
                 break;
             case "pause":

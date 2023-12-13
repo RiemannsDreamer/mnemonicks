@@ -11,10 +11,11 @@ const MnemoSettings = () => {
 
     const handleSubmit = (event) => {
 
-        const batchSizeInput = event.target.elements.batchSize.value;
-        const chunkSizeInput = event.target.elements.chunkSize.value;
+        let batchSizeInput = event.target.elements.batchSize.value;
+        let chunkSizeInput = event.target.elements.chunkSize.value;
 
-        console.log("Submitting form with values:", batchSizeInput, chunkSizeInput);
+        batchSizeInput = parseInt(batchSizeInput)
+        chunkSizeInput = parseInt(chunkSizeInput)
 
         setAppState((previous) => ({
             ...previous,
