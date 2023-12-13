@@ -51,9 +51,9 @@ const MnemoTest = () => {
                 </p>
             )}
             {countdown === 0 && (
-                <div className={"w-5/6 h-4/6"}>
+                <div className={"w-full h-5/6"}>
 
-                    <div className="max-h-50 h-40 w-full grid grid-cols-10 gap-3 overflow-scroll    ">
+                    <div className="max-h-50 h-40 w-full grid grid-cols-10 gap-3 overflow-scroll">
                         {appState.actualBatch.map((number, index) => (
                             <div key={index}>
                                 <input
