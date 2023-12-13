@@ -23,6 +23,7 @@ export default function MnemoMax() {
     ];
 
     const [appState, setAppState] = useState({
+        trainingType: "Numbers",
         trainingStatus: "Settings",
 
         clockCountSeconds: 0,

@@ -27,6 +27,7 @@ const MnemoSettings = () => {
 
     return (
         <div className={"text-white text-3xl text-center"}>
+            <h1>{appState.trainingType}</h1>
             <h1>Choose your preferences: </h1>
             <form onSubmit={handleSubmit}>
                 <label className={"text-xl"} htmlFor="batchSize">Batch Size : </label>
@@ -34,7 +35,7 @@ const MnemoSettings = () => {
                        type="text"
                        id="batchSize"
                        name="batchSize"
-                       defaultValue="22"/>
+                       defaultValue="42"/>
                 <br/>
                 <label className={"text-xl"} htmlFor="chunkSize">Chunk Size : </label>
                 <input className={"m-5 text-black"}
@@ -44,7 +45,7 @@ const MnemoSettings = () => {
                        defaultValue="4"
                 />
                 <br/>
-                <button className={"p-5 bg-cyan-800 opacity-80 rounded-xl"} type="submit">Save</button>
+                <button className={"p-3 bg-cyan-800 opacity-80 rounded-xl"} type="submit">Save</button>
             </form>
         </div>
     )
