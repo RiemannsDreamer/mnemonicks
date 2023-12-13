@@ -6,9 +6,10 @@ import { AppState} from "../MainSites/MainMenu/MnemoContexts";
 
 const MnemoTest = () => {
 
+    const {appState, setAppState} = useContext(AppState)
+
     const [eingaben, setEingaben] = useState(Array(appState.actualBatch.length).fill(''));
 
-    const {appState, setAppState} = useContext(AppState)
 
     const handleInputChange = (index, value) => {
         const neueEingaben = [...eingaben];
