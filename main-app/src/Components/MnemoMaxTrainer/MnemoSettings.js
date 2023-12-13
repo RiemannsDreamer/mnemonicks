@@ -28,7 +28,7 @@ const MnemoSettings = () => {
     return (
         <div className={"text-white text-3xl text-center"}>
             <h1>{appState.trainingType}</h1>
-            <h1>Choose your preferences: </h1>
+            <h2 className={"text-2xl"}>Choose your preferences</h2>
             <form onSubmit={handleSubmit}>
                 <label className={"text-xl"} htmlFor="batchSize">Batch Size : </label>
                 <input className={"m-5 text-black"}
