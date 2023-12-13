@@ -28,8 +28,8 @@ export default function MnemoMax() {
         clockCountSeconds: 0,
         actualStartTime: 0,
 
-        batchSize: 0,
-        chunkSize: 0,
+        batchSize: 10,
+        chunkSize: 2,
         actualChunkIndex: 0,
 
         actualBatch: [],

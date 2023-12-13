@@ -28,7 +28,7 @@ const MnemoControlPanel = () => {
         switch (action) {
             case "start":
 
-                let newActualBatch = getRandomNumbersForTraining(10, 2)
+                let newActualBatch = getRandomNumbersForTraining(appState.batchSize, appState.chunkSize)
 
                 let newAppState = {
                     trainingStatus: "Train",
@@ -36,13 +36,10 @@ const MnemoControlPanel = () => {
                     clockCountSeconds: -3,
                     actualStartTime: 0,
 
-                    batchSize: 42,
-                    chunkSize: 5,
                     actualChunkIndex: 0,
 
                     actualBatch: newActualBatch,
                     resultBatch: [],
-
                 }
 
                 setAppState(newAppState)
@@ -96,10 +93,11 @@ const MnemoControlPanel = () => {
                 setAppState((previous) => ({
                     ...previous,
 
-                    trainingStatus: "DefaultMessage",
+                    trainingStatus: "Settings",
                     timeInSeconds: 0,
 
                     actualBatch: "PressToStart",
+                    resultBatch: [],
                     actualChunkIndex: 0,
                 }));
 
