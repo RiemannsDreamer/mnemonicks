@@ -2,7 +2,7 @@ import React, {useContext, useEffect} from "react";
 import {useState} from "react";
 
 import {unChunkingBatch} from "../MainSites/MainMenu/ComputationsDataGet";
-import {ActualBatch, ResultBatch, TrainingStatus} from "../MainSites/MainMenu/MnemoContexts";
+import {ActualBatch, AppState, ResultBatch, TrainingStatus} from "../MainSites/MainMenu/MnemoContexts";
 
 
 const MnemoTest = () => {
@@ -13,6 +13,8 @@ const MnemoTest = () => {
 
     const [eingaben, setEingaben] = useState(Array(actualBatch.length).fill(''));
 
+    const {appState, setAppState} = useContext(AppState)
+
     const handleInputChange = (index, value) => {
         const neueEingaben = [...eingaben];
         neueEingaben[index] = value;
@@ -21,15 +23,17 @@ const MnemoTest = () => {
 
     const pruefeEingabe = () => {
 
-        setResultBatch(eingaben)
-
-        setTrainingStatus("Result")
+        setAppState((previous) => ({
+            ...previous,
+            resultBatch: eingaben,
+            trainingStatus: "Result",
+        }));
     };
 
-    const [countdown, setCountdown] = useState(10);
+    const [countdown, setCountdown] = useState(3);
 
     useEffect(() => {
-        if (trainingStatus === "Test" && countdown > 0) {
+        if (appState.trainingStatus === "Test" && countdown > 0) {
             const countdownInterval = setInterval(() => {
                 setCountdown((prevCountdown) => prevCountdown - 1);
             }, 1000);
@@ -37,10 +41,10 @@ const MnemoTest = () => {
             return () => {
                 clearInterval(countdownInterval);
             };
-        } else if (!(trainingStatus === "Test")) {
+        } else if (!(appState.trainingStatus) === "Test") {
             setCountdown(5);
         }
-    }, [countdown, trainingStatus]);
+    }, [countdown, appState]);
 
     return (
 
@@ -54,7 +58,7 @@ const MnemoTest = () => {
                 <div className={"w-5/6 h-4/6"}>
 
                     <div className="max-h-50 h-40 w-full grid grid-cols-10 gap-3 overflow-scroll    ">
-                        {actualBatch.map((number, index) => (
+                        {appState.actualBatch.map((number, index) => (
                             <div key={index}>
                                 <input
                                     type="text"

@@ -1,11 +1,11 @@
 import React from "react";
-import {useContext,useEffect} from "react";
+import {useContext, useEffect} from "react";
 
 import MnemoButton from "./MnemoButton";
 
 //import "../../Styles/MainSites/MnemoMax/MnemoControlPanel.css"
 
-import {LearningIsRunningContext, ClockCountSeconds, ResultBatch} from "../MainSites/MainMenu/MnemoContexts";
+import {LearningIsRunningContext, ClockCountSeconds, ResultBatch, AppState} from "../MainSites/MainMenu/MnemoContexts";
 import {ActualChunkIndex} from "../MainSites/MainMenu/MnemoContexts";
 import {ActualBatch} from "../MainSites/MainMenu/MnemoContexts";
 import {ChunkSize, BatchSize} from "../MainSites/MainMenu/MnemoContexts";
@@ -13,6 +13,7 @@ import {ChunkSize, BatchSize} from "../MainSites/MainMenu/MnemoContexts";
 import {TrainingStatus} from "../MainSites/MainMenu/MnemoContexts";
 
 import {getRandomNumbersForTraining, unChunkingBatch} from "../MainSites/MainMenu/ComputationsDataGet";
+import App from "../../App";
 
 const MnemoControlPanel = () => {
     const buttonData = [
@@ -29,81 +30,96 @@ const MnemoControlPanel = () => {
     const {timeInSeconds, setTimeInSeconds} = useContext(ClockCountSeconds);
     const {actualChunkIndex, setActualChunkIndex} = useContext(ActualChunkIndex)
 
-    const {actualBatch, setActualBatch} = useContext(ActualBatch)
-    const {resultBatch,setResultBatch} = useContext(ResultBatch)
 
     const {batchSize, setBatchSize} = useContext(BatchSize)
     const {chunkSize, setChunkSize} = useContext(ChunkSize)
 
-    const {trainingStatus,setTrainingStatus} = useContext(TrainingStatus)
+    const {actualBatch, setActualBatch} = useContext(ActualBatch)
+    const {resultBatch, setResultBatch} = useContext(ResultBatch)
+    const {trainingStatus, setTrainingStatus} = useContext(TrainingStatus)
+
+    const {appState, setAppState} = useContext(AppState)
 
     const handleButtonClick = (action) => {
 
         switch (action) {
             case "start":
 
-                setIsLearningRunning(false)
+                let newActualBatch = getRandomNumbersForTraining(10, 2)
 
-                setTimeInSeconds(-3)
+                let newAppState = {
+                    trainingStatus: "Train",
 
+                    clockCountSeconds: -3,
+                    actualStartTime: 0,
 
+                    batchSize: 42,
+                    chunkSize: 5,
+                    actualChunkIndex: 0,
 
-                setBatchSize(22)
-                setChunkSize(5)
+                    actualBatch: newActualBatch,
+                    resultBatch: [],
 
-                const newActualBatch = [...getRandomNumbersForTraining(batchSize, chunkSize)]
-                setActualBatch(newActualBatch);
+                }
 
-
-                setActualChunkIndex(0);
-
-                setIsLearningRunning(true);
-                setTrainingStatus("Train")
-
+                setAppState(newAppState)
 
                 break;
             case "pause":
-                setTrainingStatus("Pause")
-
-                setIsLearningRunning(false);
+                setAppState((previous) => ({
+                    ...previous,
+                    trainingStatus: "Pause"
+                }));
                 break;
             case "resume":
-                setTrainingStatus("Train")
-                setIsLearningRunning(true);
+
+                setAppState((previous) => ({
+                    ...previous,
+                    trainingStatus: "Train"
+                }));
+
                 break;
             case "previous":
-                setActualChunkIndex(actualChunkIndex - 1)
+
+                setAppState((previous) => ({
+                    ...previous,
+                    actualChunkIndex: previous.actualChunkIndex - 1,
+                }));
+
                 break;
             case "next":
-                setActualChunkIndex(actualChunkIndex + 1)
+                setAppState((previous) => ({
+                    ...previous,
+                    actualChunkIndex: previous.actualChunkIndex + 1,
+                }));
                 break;
             case "test":
 
-                const unchunkedBatch = [...unChunkingBatch(actualBatch)]
 
-                setActualBatch(unchunkedBatch)
+                let newUnchunkedBatch = unChunkingBatch(appState.actualBatch)
+                newUnchunkedBatch.pop()
 
-                const actualBatchToPop = [...actualBatch];
-                actualBatchToPop.pop();
-                setActualBatch(actualBatchToPop);
+                setAppState((previous) => ({
+                    ...previous,
 
+                    trainingStatus: "Test",
 
-                setIsLearningRunning(false);
+                    actualBatch: newUnchunkedBatch,
+                }));
 
-                console.log(actualBatch)
-
-                setTrainingStatus("Test")
-
-                console.log(actualBatch)
                 break;
             case "cancel":
-                setTrainingStatus("DefaultMessage")
 
-                setIsLearningRunning(false);
-                setTimeInSeconds(0);
+                setAppState((previous) => ({
+                    ...previous,
 
-                setActualBatch(["Press to Start"])
-                setActualChunkIndex(0)
+                    trainingStatus: "DefaultMessage",
+                    timeInSeconds: 0,
+
+                    actualBatch: "PressToStart",
+                    actualChunkIndex: 0,
+                }));
+
                 break;
             default:
                 break;

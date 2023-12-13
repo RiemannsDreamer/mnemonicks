@@ -1,5 +1,11 @@
 import React, {useContext, useEffect, useState} from "react";
-import {ActualBatch, ClockCountSeconds, ResultBatch, TrainingStatus} from "../MainSites/MainMenu/MnemoContexts";
+import {
+    ActualBatch,
+    AppState,
+    ClockCountSeconds,
+    ResultBatch,
+    TrainingStatus
+} from "../MainSites/MainMenu/MnemoContexts";
 
 
 const MnemoResult = () => {
@@ -12,13 +18,21 @@ const MnemoResult = () => {
 
     const [accuracy, setAccuracy] = useState(0)
 
+    const {appState,setAppState} = useContext(AppState)
+
     useEffect(() => {
 
-        if (trainingStatus === "Result") {
-            setAccuracy(computeAccuracyInPerc(actualBatch, resultBatch))
+        if (appState.trainingStatus === "Result") {
+            setAccuracy(computeAccuracyInPerc(appState.actualBatch, appState.resultBatch))
         }
 
-    }, [trainingStatus]);
+    }, [appState]);
+
+    const formatDigit = (digit) => (digit < 10 ? `0${digit}` : digit);
+
+    const hours = formatDigit(Math.floor(appState.clockCountSeconds / 3600));
+    const minutes = formatDigit(Math.floor((appState.clockCountSeconds % 3600) / 60));
+    const seconds = formatDigit(Math.floor(appState.clockCountSeconds % 60));
 
 
     return (
@@ -26,7 +40,7 @@ const MnemoResult = () => {
         <div>
             <h3>Results from Training:</h3>
             <p>Accuracy: {accuracy} %</p>
-            <p>Time used in s: {timeInSeconds} </p>
+            <p>Time used: {hours + "h : " + minutes + "min : " + seconds + "s "} </p>
         </div>
     )
 }

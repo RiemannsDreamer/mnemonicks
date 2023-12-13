@@ -6,8 +6,9 @@ import {
     LearningIsRunningContext,
     ClockCountSeconds,
     ActualStartTime,
-    TrainingStatus
+    TrainingStatus, AppState
 } from "../MainSites/MainMenu/MnemoContexts";
+import App from "../../App";
 
 const MnemoClock = () => {
     const {isLearningRunning, setIsLearningRunning} = useContext(LearningIsRunningContext);
@@ -15,19 +16,26 @@ const MnemoClock = () => {
     const {timeInSeconds, setTimeInSeconds} = useContext(ClockCountSeconds);
     let {actualStartTime,setActualStartTime} = useContext(ActualStartTime)
 
+    const {appState,setAppState} = useContext(AppState)
+
 
     let intervalId;
     useEffect(() => {
 
+        // TODO: Altered
 
-        if (trainingStatus === "Train") {
+        if (appState.trainingStatus === "Train") {
             let startTime = new Date().getTime() / 1000
 
             const updateElapsedTime = () => {
                 const actualTime = new Date().getTime() / 1000;
                 const elapsedSeconds = (actualTime -  startTime);
 
-                setTimeInSeconds(timeInSeconds + Math.floor(elapsedSeconds));
+                // TODO: altered
+                setAppState((previous) => ({
+                    ...previous,
+                    clockCountSeconds: previous.clockCountSeconds + Math.floor(elapsedSeconds),
+                }));
             };
 
             intervalId = setInterval(updateElapsedTime, 1000);
@@ -38,13 +46,13 @@ const MnemoClock = () => {
         return () => {
             clearInterval(intervalId);
         };
-    }, [trainingStatus, setTimeInSeconds]);
+    }, [appState]);
 
     const formatDigit = (digit) => (digit < 10 ? `0${digit}` : digit);
 
-    const hours = formatDigit(Math.floor(timeInSeconds / 3600));
-    const minutes = formatDigit(Math.floor((timeInSeconds % 3600) / 60));
-    const seconds = formatDigit(Math.floor(timeInSeconds % 60));
+    const hours = formatDigit(Math.floor(appState.clockCountSeconds / 3600));
+    const minutes = formatDigit(Math.floor((appState.clockCountSeconds % 3600) / 60));
+    const seconds = formatDigit(Math.floor(appState.clockCountSeconds % 60));
 
     return (
             <div className="flex relative w-2/3 mx-auto m-4">

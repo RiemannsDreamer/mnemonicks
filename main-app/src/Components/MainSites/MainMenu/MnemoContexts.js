@@ -43,13 +43,13 @@ export const ActualChunkIndex = createContext(0)
  * Total size of the data to lean in training.
  * @type {React.Context<number>}
  */
-export const BatchSize = createContext(13)
+export const BatchSize = createContext(43)
 
 /**
  * Size of one single chunk. Only one chunk is displayed in content actually
  * @type {React.Context<number>}
  */
-export const ChunkSize = createContext(4)
+export const ChunkSize = createContext(10)
 
 /**
  * Holds the actual batch of information. Is an Array of Chunks. (2D)
@@ -60,3 +60,19 @@ export const ActualBatch = createContext(["Press to Start"])
 export const TrainingStatus = createContext("DefaultMessage")
 
 export const ResultBatch = createContext([])
+
+// TODO: Single State for management
+export const AppState = createContext({
+    trainingStatus: "DefaultMessage",
+
+    clockCountSeconds: 0,
+    actualStartTime: 0,
+
+    batchSize: 0,
+    chunkSize: 0,
+    actualChunkIndex: 0,
+
+    actualBatch: [],
+    resultBatch: [],
+
+})
