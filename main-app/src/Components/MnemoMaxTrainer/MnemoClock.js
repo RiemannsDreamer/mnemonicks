@@ -1,11 +1,18 @@
-import React, {useState, useEffect, useContext} from "react";
-// import "../../Styles/MainSites/MnemoMax/MnemoClock.css";
+import React, {useEffect, useContext} from "react";
 
-// Import contexts
+
 import {AppState
-} from "../MainSites/MainMenu/MnemoContexts";
-import App from "../../App";
+} from "../MainSites/MainMenuHeader/MnemoContexts";
 
+
+/**
+ * Digital Clock for MnemoMax App.
+ * Displays training time during training.
+ * Later used to compute time dependent scores and display results.
+ *
+ * @returns {Element}
+ * @constructor
+ */
 const MnemoClock = () => {
 
     const {appState,setAppState} = useContext(AppState)
@@ -46,7 +53,7 @@ const MnemoClock = () => {
     const seconds = formatDigit(Math.floor(appState.clockCountSeconds % 60));
 
     return (
-            <div className="flex relative w-2/3 mx-auto m-4">
+            <div className="flex w-2/3 mx-auto m-4">
                 <div className="text-center w-full bg-cyan-950 text-white p-4 rounded-lg shadow-2xl">
                     <span className="text-3xl">{hours}</span>
                     <span className="mx-2">:</span>

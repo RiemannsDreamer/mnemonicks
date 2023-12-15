@@ -3,13 +3,21 @@ import {useContext, useEffect} from "react";
 
 import MnemoButton from "./MnemoButton";
 
-//import "../../Styles/MainSites/MnemoMax/MnemoControlPanel.css"
 
-import { AppState} from "../MainSites/MainMenu/MnemoContexts";
+import { AppState} from "../MainSites/MainMenuHeader/MnemoContexts";
 
-import {getRandomNumbersForTraining, unChunkingBatch} from "../MainSites/MainMenu/ComputationsDataGet";
-import App from "../../App";
+import {getRandomNumbersForTraining, unChunkingBatch} from "./ComputationsDataGet";
 
+
+/**
+ * Important control panel to control process flow during training.
+ * Contains much of the domain logic in "handleButtonClick" function.
+ * Will be refactored later. Passing single functions as action arguments.
+ * Does some state management, but states are used dependently in other Components.
+ *
+ * @returns {Element}
+ * @constructor
+ */
 const MnemoControlPanel = () => {
     const buttonData = [
         {title: "Start", action: "start"},
@@ -26,7 +34,6 @@ const MnemoControlPanel = () => {
     useEffect(() => {
         console.log(appState);
 
-        // Cleanup-Funktion: wird ausgeführt, wenn die Komponente demontiert wird
         return () => {
             console.log('Component unmounted');
         };
@@ -41,22 +48,6 @@ const MnemoControlPanel = () => {
                 console.log(appState.batchSize, appState.chunkSize)
                 console.log(newActualBatch)
 
-                /*
-                let newAppState = {
-                    trainingStatus: "Train",
-
-                    clockCountSeconds: -3,
-                    actualStartTime: 0,
-
-                    actualChunkIndex: 0,
-
-                    actualBatch: newActualBatch,
-                    resultBatch: [],
-                }
-
-                setAppState(newAppState)
-
-                 */
                 setAppState((previous) => ({
                     ...previous,
                     clockCountSeconds: -3,

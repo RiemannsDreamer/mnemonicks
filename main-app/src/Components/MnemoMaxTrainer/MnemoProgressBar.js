@@ -1,6 +1,6 @@
 
 import React from "react";
-//import "../../Styles/MainSites/MnemoMax/MnemoProgressBar.css";
+
 
 
 const exampleProgressData = {
@@ -17,6 +17,13 @@ const exampleProgressItems = Array.from({ length:3 }, (_, index) => ({
     progress: Math.random() * 100,
 }));
 
+/**
+ * Not really implemented yet.
+ * Will be used to display information about the training and progress while training is on (session, live info).
+ *
+ * @returns {Element}
+ * @constructor
+ */
 const MnemoProgressBar = () => {
     return (
         <div className="progress-bar">

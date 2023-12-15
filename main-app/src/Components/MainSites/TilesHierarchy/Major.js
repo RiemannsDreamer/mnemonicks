@@ -1,8 +1,7 @@
 
 import React from 'react';
-import Tile from "../Tile/Tile";
 
-import "../../Styles/MainSites/Major.css"
+import "../../../Styles/MainSites/Major.css"
 
 const Major = () => {
     return (

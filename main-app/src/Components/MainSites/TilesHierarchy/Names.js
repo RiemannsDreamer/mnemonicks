@@ -1,8 +1,7 @@
 
 import React from 'react';
-import Tile from "../Tile/Tile";
 
-import "../../Styles/MainSites/Names.css"
+import "../../../Styles/MainSites/Names.css"
 
 const Names = () => {
     return (

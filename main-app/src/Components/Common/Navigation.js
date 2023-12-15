@@ -1,10 +1,18 @@
-// Navigation.js
+
 import React from 'react';
 import NavPoint from './NavPoint';
-//import "../../Styles/Navigation.css"
 
 import "../../App.css"
 
+
+/**
+ * Simple Navigation bar. Mapping NavPoints in one line, text aligned right.
+ * Used as Application Menus in Header and Footer.
+ *
+ * @param navItems
+ * @returns {Element}
+ * @constructor
+ */
 const Navigation = ({ navItems}) => {
     return (
         <div className={"flex justify-center ml-auto space-x-6 mr-10"}>

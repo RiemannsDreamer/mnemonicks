@@ -1,25 +1,34 @@
-import React, {useState, useEffect, useRef} from "react";
-// import "../../../Styles/MainSites/MnemoMax/MnemoMax.css";
+import React, {useState} from "react";
 import MnemoMenu from "../../MnemoMaxTrainer/MnemoMenu";
 import MnemoProgressBar from "../../MnemoMaxTrainer/MnemoProgressBar";
 import MnemoClock from "../../MnemoMaxTrainer/MnemoClock";
 import MnemoContent from "../../MnemoMaxTrainer/MnemoContent";
 import MnemoControlPanel from "../../MnemoMaxTrainer/MnemoControlPanel";
 
-// Context import
 import {AppState} from "./MnemoContexts";
 
-
+/**
+ * Main App Component, this is the MnemoMax app.
+ * With this app the user can train his / her mnemonic skills.
+ * Different types of information and systems are provided.
+ * there is text and visual information.
+ * This is a prototype only. (actually).
+ *
+ * @returns {Element}
+ * @constructor
+ */
 export default function MnemoMax() {
 
 
     const menuData = [
         {title: "Numbers", items: ["Random Decimal", "Random Binary", "Special"]},
         {title: "Cards", items: ["52er", "36er", "32er"]},
-        {title: "Names", items: ["Random", "Text", "Images"]},
+        {title: "Names & Faces", items: ["Random", "Text", "Images"]},
         {title: "Alphabets", items: ["Tiere", "Gemüse", "Fahrzeuge", "Werkzeuge", "Sportarten"]},
         {title: "Routes", items: ["Text", "Image", "?"]},
         {title: "Rooms", items: ["Random", "Thematic", "Mind Palaces"]},
+        {title: "Systems", items: ["PAO", "Major", "Dominic"]},
+        {title: "Settings", items: ["Load File", "Save", "Styles"]}
     ];
 
     const [appState, setAppState] = useState({
@@ -27,15 +36,13 @@ export default function MnemoMax() {
         trainingStatus: "Settings",
 
         clockCountSeconds: 0,
-        actualStartTime: 0,
 
-        batchSize: 10,
-        chunkSize: 2,
+        batchSize: 42,
+        chunkSize: 4,
         actualChunkIndex: 0,
 
         actualBatch: [],
         resultBatch: [],
-
     })
 
     return (

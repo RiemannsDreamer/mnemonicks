@@ -1,9 +1,19 @@
 import React, {useContext, useEffect} from "react";
 import {useState} from "react";
 
-import { AppState} from "../MainSites/MainMenu/MnemoContexts";
+import { AppState} from "../MainSites/MainMenuHeader/MnemoContexts";
 
-
+// TODO: Needs a better input solution, too many clicks etc.
+/**
+ * Component to test the user's memory / recall.
+ * Input devices are displayed and the user can recall and input his solution.
+ * Reads the solution of the user and saves this in appState (ResultBatch).
+ * "Check" Button is provided. When pressing, results are shown.
+ *
+ *
+ * @returns {Element}
+ * @constructor
+ */
 const MnemoTest = () => {
 
     const {appState, setAppState} = useContext(AppState)

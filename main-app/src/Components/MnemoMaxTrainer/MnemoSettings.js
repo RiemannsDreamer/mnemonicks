@@ -1,9 +1,17 @@
-import React, {useContext, useState} from "react";
-import App from "../../App";
-import {AppState} from "../MainSites/MainMenu/MnemoContexts";
-import MnemoButton from "./MnemoButton";
+import React, {useContext} from "react";
+
+import {AppState} from "../MainSites/MainMenuHeader/MnemoContexts";
 
 
+/**
+ * Landing component for the content box.
+ * Contains the initial Settings for a training.
+ * At the moment only Numbers are provided.
+ * Choose batchSize and chunkSize here.
+ *
+ * @returns {Element}
+ * @constructor
+ */
 const MnemoSettings = () => {
 
 
@@ -31,14 +39,14 @@ const MnemoSettings = () => {
             <h2 className={"text-2xl"}>Choose your preferences</h2>
             <form onSubmit={handleSubmit}>
                 <label className={"text-xl"} htmlFor="batchSize">Batch Size : </label>
-                <input className={"m-5 text-black"}
+                <input className={"m-5 text-white bg-cyan-600 rounded-xl opacity-80"}
                        type="text"
                        id="batchSize"
                        name="batchSize"
                        defaultValue="42"/>
                 <br/>
                 <label className={"text-xl"} htmlFor="chunkSize">Chunk Size : </label>
-                <input className={"m-5 text-black"}
+                <input className={"m-5 text-white bg-cyan-600 rounded-xl opacity-80"}
                        type="text"
                        id="chunkSize"
                        name="chunkSize"

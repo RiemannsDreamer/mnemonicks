@@ -1,12 +1,17 @@
 import React from "react";
-import {useEffect, useState} from "react"
+import {useEffect} from "react"
 
 
 import MnemoMax from "./MnemoMax";
 
 
-
-const MainAppSite = () => {
+/**
+ * Container for the whole mnemomax app. One main Component of the website.
+ *
+ * @returns {Element}
+ * @constructor
+ */
+const MainMnemoMaxSite = () => {
     const scrollToContent = () => {
 
         const headerHeight = document.getElementById("header").clientHeight;
@@ -29,4 +34,4 @@ const MainAppSite = () => {
     );
 };
 
-export default MainAppSite
+export default MainMnemoMaxSite

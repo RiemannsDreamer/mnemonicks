@@ -1,14 +1,27 @@
 import React from 'react';
-import Tile from "../Tile/Tile";
+import Tile from "../../Tile/Tile";
 
 //import "../../Styles/MainSites/Grid_home.css"
 
+/**
+ * Landing page of the website(s).
+ * Content, without header and footer.
+ * Contains a hierarchical structures of tiles which serve navigation to different topics.
+ * will be defined in a JSON file or directory-structure later (design).
+ *
+ * For the subsites in this structure there is no documentation provided.
+ * This is because the design / arch of this content sites is temporary and will be changed later.
+ * There is no real content at the moment.
+ *
+ * @returns {Element}
+ * @constructor
+ */
 const Home = () => {
 
     const tileData = [
         {
             title: "Infos",
-            subtitle: "Infocenter for trainings",
+            subtitle: "Info-Center for trainings",
             cornerImageUrl: "../../Images/Logos/Infos.jpg",
             linkTo: "/infos",
         },

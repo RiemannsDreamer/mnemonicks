@@ -1,9 +1,8 @@
 import React from 'react';
-import Tile from "../Tile/Tile";
+import Tile from "../../Tile/Tile";
 
-//import "../../Styles/MainSites/Grammar.css"
 
-import "../../Styles/MainSites/Grid_home.css"
+import "../../../Styles/MainSites/Grid_home.css"
 
 // TODO: Add links in router
 

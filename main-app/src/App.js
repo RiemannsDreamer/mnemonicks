@@ -7,25 +7,37 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Header from './Components/Common/Header';
 import Footer from './Components/Common/Footer';
-import Tile from './Components/Tile/Tile';
 
-import Home from './Components/MainSites/Home';
-import Infos from './Components/MainSites/Infos';
-import Numbers from './Components/MainSites/Numbers';
-import Alphabets from './Components/MainSites/Alphabets';
-import Cards from './Components/MainSites/Cards';
-import Grammar from './Components/MainSites/Grammar';
-import Loci from './Components/MainSites/Loci'
-import Major from './Components/MainSites/Major';
-import MindPalace from "./Components/MainSites/Mind-Palace";
-import Names from "./Components/MainSites/Names";
-import PCMPG from "./Components/MainSites/PCMPG";
-import Pegs from "./Components/MainSites/Pegs";
-import Vocab from "./Components/MainSites/Vocab";
 
-// import MnemoMax from "./Components/MainSites/MainMenu/MnemoMax";
-import MainAppSite from "./Components/MainSites/MainMenu/MainAppSite"
+import Home from './Components/MainSites/MainMenuHeader/Home';
+import Infos from './Components/MainSites/TilesHierarchy/Infos';
+import Numbers from './Components/MainSites/TilesHierarchy/Numbers';
+import Alphabets from './Components/MainSites/TilesHierarchy/Alphabets';
+import Cards from './Components/MainSites/TilesHierarchy/Cards';
+import Grammar from './Components/MainSites/TilesHierarchy/Grammar';
+import Loci from './Components/MainSites/TilesHierarchy/Loci'
+import Major from './Components/MainSites/TilesHierarchy/Major';
+import MindPalace from "./Components/MainSites/TilesHierarchy/Mind-Palace";
+import Names from "./Components/MainSites/TilesHierarchy/Names";
+import PCMPG from "./Components/MainSites/TilesHierarchy/PCMPG";
+import Pegs from "./Components/MainSites/TilesHierarchy/Pegs";
+import Vocab from "./Components/MainSites/TilesHierarchy/Vocab";
+import Impressum from "./Components/MainSites/Footer/Impressum";
 
+import MainMnemoMaxSite from "./Components/MainSites/MainMenuHeader/MainMnemoMaxSite"
+import Privacy from "./Components/MainSites/Footer/Privacy";
+import Cookies from "./Components/MainSites/Footer/Cookies";
+import Credits from "./Components/MainSites/Footer/Credits";
+
+/**
+ * Main app component. react arch...
+ * Holds only header / footer site structure...
+ * And React-Router-Dom links definitions.
+ * Routes to home on content root and therefore serves the landing page.
+ *
+ * @returns {Element}
+ * @constructor
+ */
 const App = () => {
 
     const headerNavItems = [
@@ -39,11 +51,11 @@ const App = () => {
     ];
 
     const footerNavItems = [
-        { content: 'Impressum', linkTo: '/'},
+        { content: 'Impressum', linkTo: '/impressum'},
         { content: 'Contact' , linkTo: '/'},
-        { content: 'Privacy' , linkTo: '/'},
-        { content: 'Cookies', linkTo: '/' },
-        { content: 'Credits' , linkTo: '/'},
+        { content: 'Privacy' , linkTo: '/privacy'},
+        { content: 'Cookies', linkTo: '/cookies' },
+        { content: 'Credits' , linkTo: '/credits'},
 
     ];
 
@@ -68,7 +80,12 @@ const App = () => {
                         <Route path="/pegs" element={<Pegs />} />
                         <Route path="/vocab" element={<Vocab />} />
 
-                        <Route path="/mnemo-max" element={<MainAppSite/>}/>
+                        <Route path="/mnemo-max" element={<MainMnemoMaxSite/>}/>
+
+                        <Route path="/impressum" element={<Impressum/>}/>
+                        <Route path="/privacy" element={<Privacy/>}/>
+                        <Route path="/cookies" element={<Cookies/>}/>
+                        <Route path="/credits" element={<Credits/>}/>
                     </Routes>
                 </main>
                 <Footer navItems={footerNavItems} />

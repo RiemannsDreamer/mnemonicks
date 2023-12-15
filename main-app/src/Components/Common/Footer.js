@@ -1,9 +1,16 @@
-// Footer.js
-
 import React from 'react';
 
-//import "../../Styles/Footer.css"
 import Navigation from "./Navigation";
+
+
+/**
+ * Simple Footer mapping a menu with standard infos of the website. Footer.
+ * Contains Navigation (footer menu).
+ *
+ * @param navItems
+ * @returns {Element}
+ * @constructor
+ */
 const Footer = ({navItems}) => {
     return (
         <footer className={"footer"}>

@@ -1,9 +1,15 @@
 import React, {useContext, useEffect, useState} from "react";
-import {
-    AppState
-} from "../MainSites/MainMenu/MnemoContexts";
+import {AppState} from "../MainSites/MainMenuHeader/MnemoContexts";
 
 
+/**
+ * Displays the results of the session on the end of a training (session).
+ * Makes use of appState to compute and render info.
+ * Provides restart button. When pressed, a fresh session is started.
+ *
+ * @returns {Element}
+ * @constructor
+ */
 const MnemoResult = () => {
 
     const [accuracy, setAccuracy] = useState(0)
@@ -52,6 +58,15 @@ const MnemoResult = () => {
 
 export default MnemoResult
 
+
+/**
+ * Helperfunction to compute the accuracy for the results.
+ * Will be replaced with more complex metrics and scores.
+ *
+ * @param actualBatch
+ * @param resultBatch
+ * @returns {number}
+ */
 function computeAccuracyInPerc(actualBatch, resultBatch) {
 
     let correct = 0

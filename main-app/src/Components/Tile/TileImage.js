@@ -3,7 +3,17 @@ import "../../Styles/CornerImage.css";
 import React, { useState } from 'react';
 import Tooltip from './Tooltip';
 
-const CornerImage = ({ imageUrl, tooltipContent }) => {
+
+/**
+ * Simple Component to provide the head image of one single tile.
+ * Only abstraction.
+ *
+ * @param imageUrl
+ * @param tooltipContent
+ * @returns {Element}
+ * @constructor
+ */
+const TileImage = ({ imageUrl, tooltipContent }) => {
     const [showTooltip, setShowTooltip] = useState(false);
 
     const handleMouseEnter = () => {
@@ -22,4 +32,4 @@ const CornerImage = ({ imageUrl, tooltipContent }) => {
     );
 };
 
-export default CornerImage;
+export default TileImage;

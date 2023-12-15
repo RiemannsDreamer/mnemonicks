@@ -1,8 +1,7 @@
 
 import React from 'react';
-import Tile from "../Tile/Tile";
 
-import "../../Styles/MainSites/Vocab.css"
+import "../../../Styles/MainSites/Vocab.css"
 
 const Vocab = () => {
     return (
