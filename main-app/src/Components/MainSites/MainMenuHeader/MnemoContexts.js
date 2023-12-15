@@ -2,8 +2,10 @@ import {createContext} from "react";
 
 
 /**
- * Global App State to manage renderings and progress etc.
- * set only once... this is a Workaround...
+ * Global App State / Context to manage renderings and progress etc.
+ * set only once... this is a Workaround... redux will be used later.
+ * Due to problems with "batching" and asynchronous execution, it's a single state / context used.
+ * Used only for MnemoMax App Component, not globally on the whole site.
  *
  *
  * @type {React.Context<{actualStartTime: number, chunkSize: number, actualChunkIndex: number, resultBatch: *[], trainingStatus: string, clockCountSeconds: number, batchSize: number, actualBatch: *[]}>}

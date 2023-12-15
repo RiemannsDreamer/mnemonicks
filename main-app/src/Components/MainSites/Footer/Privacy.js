@@ -1,6 +1,12 @@
 import React from "react";
 
 
+
+/**
+ * Privacy Policy. Not implemented yet. At the moment only general Information.
+ * @returns {Element}
+ * @constructor
+ */
 const Privacy = () =>
 {
 

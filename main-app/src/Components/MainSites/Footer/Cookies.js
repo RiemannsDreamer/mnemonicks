@@ -1,6 +1,11 @@
 import React from "react";
 
 
+/**
+ * Cookie Policy. Not implemented yet. At the moment only general Information.
+ * @returns {Element}
+ * @constructor
+ */
 const Cookies = () =>
 {
 

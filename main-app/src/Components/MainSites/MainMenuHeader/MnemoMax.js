@@ -1,15 +1,22 @@
 import React, {useState, useEffect, useRef} from "react";
-// import "../../../Styles/MainSites/MnemoMax/MnemoMax.css";
 import MnemoMenu from "../../MnemoMaxTrainer/MnemoMenu";
 import MnemoProgressBar from "../../MnemoMaxTrainer/MnemoProgressBar";
 import MnemoClock from "../../MnemoMaxTrainer/MnemoClock";
 import MnemoContent from "../../MnemoMaxTrainer/MnemoContent";
 import MnemoControlPanel from "../../MnemoMaxTrainer/MnemoControlPanel";
 
-// Context import
 import {AppState} from "./MnemoContexts";
 
-
+/**
+ * Main App Component, this is the MnemoMax app.
+ * With this app the user can train his / her mnemonic skills.
+ * Different types of information and systems are provided.
+ * there is text and visual information.
+ * This is a prototype only. (actually).
+ *
+ * @returns {Element}
+ * @constructor
+ */
 export default function MnemoMax() {
 
 

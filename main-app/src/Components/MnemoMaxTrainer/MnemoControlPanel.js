@@ -7,7 +7,7 @@ import MnemoButton from "./MnemoButton";
 
 import { AppState} from "../MainSites/MainMenuHeader/MnemoContexts";
 
-import {getRandomNumbersForTraining, unChunkingBatch} from "../MainSites/MainMenuHeader/ComputationsDataGet";
+import {getRandomNumbersForTraining, unChunkingBatch} from "./ComputationsDataGet";
 import App from "../../App";
 
 const MnemoControlPanel = () => {

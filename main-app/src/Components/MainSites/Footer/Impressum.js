@@ -1,8 +1,11 @@
 import React from "react";
 
 
-
-
+/**
+ * Standard Impressum with information and contact details.
+ * @returns {Element}
+ * @constructor
+ */
 const Impressum = () => {
 
     return (
@@ -29,7 +32,7 @@ const Impressum = () => {
             <br/>
             <p className={"my-10"}>Kontakt: support@aka-riemann.ch</p>
             <br/>
-            <p>(German / English)</p>
+            <p>(German / English / French)</p>
 
 
 
