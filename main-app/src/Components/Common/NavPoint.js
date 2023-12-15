@@ -1,10 +1,18 @@
 import React from 'react';
 
-//import "../../Styles/NavPoint.css"
 import {Link} from "react-router-dom";
 
 
-//<img className={"menu-img"} src={logoSrc} alt={"Logo"}/>
+/**
+ * Simple Menu Item for the Navigation Bars.
+ * Contains a text content and a link within react router dom.
+ *
+ *
+ * @param content
+ * @param linkTo
+ * @returns {Element}
+ * @constructor
+ */
 const NavPoint = ({ content, linkTo }) => {
     return (
         <Link to={linkTo} className={"nav-link "}>
