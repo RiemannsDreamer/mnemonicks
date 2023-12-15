@@ -1,6 +1,4 @@
 import React, { useContext ,useState} from "react";
-// import "../../Styles/MainSites/MnemoMax/MnemoButton.css";
-import { LearningIsRunningContext } from "../MainSites/MainMenu/MnemoContexts";
 
 const MnemoButton = ({ title, onClick }) => {
 
@@ -9,13 +7,10 @@ const MnemoButton = ({ title, onClick }) => {
     const handleClick = () => {
         setIsClicked(true);
 
-        // Setze den Button nach einer kurzen Zeit zurück
         setTimeout(() => {
             setIsClicked(false);
-        }, 300); // Hier kannst du die Dauer in Millisekunden anpassen
+        }, 300);
     };
-
-    const { isLearningRunning,setIsLearningRunning } = useContext(LearningIsRunningContext);
 
 
     return (
