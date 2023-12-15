@@ -5,9 +5,9 @@ import MnemoButton from "./MnemoButton";
 
 //import "../../Styles/MainSites/MnemoMax/MnemoControlPanel.css"
 
-import { AppState} from "../MainSites/MainMenu/MnemoContexts";
+import { AppState} from "../MainSites/MainMenuHeader/MnemoContexts";
 
-import {getRandomNumbersForTraining, unChunkingBatch} from "../MainSites/MainMenu/ComputationsDataGet";
+import {getRandomNumbersForTraining, unChunkingBatch} from "../MainSites/MainMenuHeader/ComputationsDataGet";
 import App from "../../App";
 
 const MnemoControlPanel = () => {

@@ -9,26 +9,26 @@ import Header from './Components/Common/Header';
 import Footer from './Components/Common/Footer';
 import Tile from './Components/Tile/Tile';
 
-import Home from './Components/MainSites/Home';
-import Infos from './Components/MainSites/Infos';
-import Numbers from './Components/MainSites/Numbers';
-import Alphabets from './Components/MainSites/Alphabets';
-import Cards from './Components/MainSites/Cards';
-import Grammar from './Components/MainSites/Grammar';
-import Loci from './Components/MainSites/Loci'
-import Major from './Components/MainSites/Major';
-import MindPalace from "./Components/MainSites/Mind-Palace";
-import Names from "./Components/MainSites/Names";
-import PCMPG from "./Components/MainSites/PCMPG";
-import Pegs from "./Components/MainSites/Pegs";
-import Vocab from "./Components/MainSites/Vocab";
-import Impressum from "./Components/MainSites/Impressum";
+import Home from './Components/MainSites/MainMenuHeader/Home';
+import Infos from './Components/MainSites/TilesHierarchy/Infos';
+import Numbers from './Components/MainSites/TilesHierarchy/Numbers';
+import Alphabets from './Components/MainSites/TilesHierarchy/Alphabets';
+import Cards from './Components/MainSites/TilesHierarchy/Cards';
+import Grammar from './Components/MainSites/TilesHierarchy/Grammar';
+import Loci from './Components/MainSites/TilesHierarchy/Loci'
+import Major from './Components/MainSites/TilesHierarchy/Major';
+import MindPalace from "./Components/MainSites/TilesHierarchy/Mind-Palace";
+import Names from "./Components/MainSites/TilesHierarchy/Names";
+import PCMPG from "./Components/MainSites/TilesHierarchy/PCMPG";
+import Pegs from "./Components/MainSites/TilesHierarchy/Pegs";
+import Vocab from "./Components/MainSites/TilesHierarchy/Vocab";
+import Impressum from "./Components/MainSites/Footer/Impressum";
 
-// import MnemoMax from "./Components/MainSites/MainMenu/MnemoMax";
-import MainMnemoMaxSite from "./Components/MainSites/MainMenu/MainMnemoMaxSite"
-import Privacy from "./Components/MainSites/Privacy";
-import Cookies from "./Components/MainSites/Cookies";
-import Credits from "./Components/MainSites/Credits";
+// import MnemoMax from "./Components/MainSites/MainMenuHeader/MnemoMax";
+import MainMnemoMaxSite from "./Components/MainSites/MainMenuHeader/MainMnemoMaxSite"
+import Privacy from "./Components/MainSites/Footer/Privacy";
+import Cookies from "./Components/MainSites/Footer/Cookies";
+import Credits from "./Components/MainSites/Footer/Credits";
 
 const App = () => {
 

@@ -1,39 +1,38 @@
 
 import React from 'react';
-import Tile from "../Tile/Tile";
+import Tile from "../../Tile/Tile";
 
-//import "../../Styles/MainSites/Cards.css"
+//import "../../Styles/MainSites/Alphabets.css"
 
-import "../../Styles/MainSites/Grid_home.css"
+import "../../../Styles/MainSites/Grid_home.css"
 
-// TODO: add links in router
+// TODO: add links to router
 
-const Cards = () => {
+const Alphabets = () => {
 
     const tileData = [
         {
-            title: "52-Poker",
-            subtitle: "Learn a Poker Set",
+            title: "Plants",
+            subtitle: "Plant Alphabet",
             cornerImageUrl: "../../Images/Logos/Numbers2.jpg",
-            linkTo: "/poker"
+            linkTo: "/plant-alphabet",
         },
         {
-            title: "36-French",
-            subtitle: "Learn a french set",
+            title: "Animals",
+            subtitle: "Animals Alphabet",
             cornerImageUrl: "../../Images/Logos/Numbers2.jpg",
-            linkTo: "/french-set"
+            linkTo: "/animals",
         },
         {
-            title: "Swiss Jass",
-            subtitle: "Learn a Swiss Jass set",
+            title: "Tools",
+            subtitle: "Tools Alphabet",
             cornerImageUrl: "../../Images/Logos/Numbers2.jpg",
-            linkTo: "/swiss-jass"
+            linkTo: "/tools",
         }
     ]
 
     return (
         <div className={"grid-home"}>
-
             {tileData.map((tile) => (
                 <Tile
                     key={tile.id}
@@ -48,4 +47,4 @@ const Cards = () => {
     );
 };
 
-export default Cards
+export default Alphabets

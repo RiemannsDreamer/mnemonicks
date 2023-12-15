@@ -1,43 +1,42 @@
 
 import React from 'react';
-import Tile from "../Tile/Tile";
+import Tile from "../../Tile/Tile";
 
-// import "../../App.css"
-//import "../../Styles/MainSites/Infos.css"
+//import "../../Styles/MainSites/Numbers.css"
+import "../../../Styles/MainSites/Grid_home.css"
 
-import "../../Styles/MainSites/Grid_home.css"
-
-const Infos = () => {
+const Numbers = () => {
     return (
         <div className={"grid-home"}>
             <Tile
-                title="Web-Reference"
-                subtitle="Some (good) references"
+                title="Random"
+                subtitle="Learn random decimals"
                 cornerImageUrl="../../Images/Logos/Numbers2.jpg"
-                linkTo="/reference"
+                linkTo="/random-numbers"
                 tooltipTitle="Tooltip Titel 1"
                 tooltipText="Tooltip Text 1"
             />
             <Tile
-                title="Wiki articles"
-                subtitle="Some selected articles"
+                title="Special"
+                subtitle="Learn special numbers like pi and e"
                 cornerImageUrl="../../Images/Logos/Numbers2.jpg"
-                linkTo="/wikis"
+                linkTo="/special-numbers"
                 tooltipTitle="Tooltip Titel 1"
                 tooltipText="Tooltip Text 1"
             />
             <Tile
-                title="Books"
-                subtitle="Some Books in English and German"
+                title="Binary"
+                subtitle="Learn binary numbers"
                 cornerImageUrl="../../Images/Logos/Numbers2.jpg"
+                linkTo="/binaries"
                 tooltipTitle="Tooltip Titel 1"
                 tooltipText="Tooltip Text 1"
             />
             <Tile
                 title="Own"
-                subtitle="Own material"
+                subtitle="Learn your own saved numbers"
                 cornerImageUrl="../../Images/Logos/Numbers2.jpg"
-                linkTo="/own"
+                linkTo="/own-numbers"
                 tooltipTitle="Tooltip Titel 1"
                 tooltipText="Tooltip Text 1"
             />
@@ -45,4 +44,4 @@ const Infos = () => {
     );
 };
 
-export default Infos
+export default Numbers

@@ -1,8 +1,8 @@
 
 import React from 'react';
-import Tile from "../Tile/Tile";
+import Tile from "../../Tile/Tile";
 
-import "../../Styles/MainSites/PCMPG.css"
+import "../../../Styles/MainSites/PCMPG.css"
 
 const PCMPG = () => {
     return (
