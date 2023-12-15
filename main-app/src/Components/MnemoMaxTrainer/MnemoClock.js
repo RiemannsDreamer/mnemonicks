@@ -46,7 +46,7 @@ const MnemoClock = () => {
     const seconds = formatDigit(Math.floor(appState.clockCountSeconds % 60));
 
     return (
-            <div className="flex relative w-2/3 mx-auto m-4">
+            <div className="flex w-2/3 mx-auto m-4">
                 <div className="text-center w-full bg-cyan-950 text-white p-4 rounded-lg shadow-2xl">
                     <span className="text-3xl">{hours}</span>
                     <span className="mx-2">:</span>

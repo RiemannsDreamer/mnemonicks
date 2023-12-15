@@ -16,10 +16,12 @@ export default function MnemoMax() {
     const menuData = [
         {title: "Numbers", items: ["Random Decimal", "Random Binary", "Special"]},
         {title: "Cards", items: ["52er", "36er", "32er"]},
-        {title: "Names", items: ["Random", "Text", "Images"]},
+        {title: "Names & Faces", items: ["Random", "Text", "Images"]},
         {title: "Alphabets", items: ["Tiere", "Gemüse", "Fahrzeuge", "Werkzeuge", "Sportarten"]},
         {title: "Routes", items: ["Text", "Image", "?"]},
         {title: "Rooms", items: ["Random", "Thematic", "Mind Palaces"]},
+        {title: "Systems", items: ["PAO", "Major", "Dominic"]},
+        {title: "Settings", items: ["Load File", "Save", "Styles"]}
     ];
 
     const [appState, setAppState] = useState({

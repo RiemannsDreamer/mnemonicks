@@ -9,13 +9,11 @@ const MnemoMenu = ({ menuData }) => {
     };
 
     return (
-        <div className={"bg-gradient-to-tr from-cyan-600 to-cyan-900 rounded-2xl opacity-80"}>
+        <div className={"w-full bg-gradient-to-tr from-cyan-600 to-cyan-900 rounded-2xl opacity-80"}>
             {menuData.map((menuItem, index) => (
                 <RecursiveDropdown
                     key={index}
                     menuData={menuItem}
-                    isOpen={isOpen}
-                    handleToggleClick={handleToggleClick}
                 />
             ))}
         </div>
