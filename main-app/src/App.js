@@ -22,9 +22,13 @@ import Names from "./Components/MainSites/Names";
 import PCMPG from "./Components/MainSites/PCMPG";
 import Pegs from "./Components/MainSites/Pegs";
 import Vocab from "./Components/MainSites/Vocab";
+import Impressum from "./Components/MainSites/Impressum";
 
 // import MnemoMax from "./Components/MainSites/MainMenu/MnemoMax";
-import MainAppSite from "./Components/MainSites/MainMenu/MainAppSite"
+import MainMnemoMaxSite from "./Components/MainSites/MainMenu/MainMnemoMaxSite"
+import Privacy from "./Components/MainSites/Privacy";
+import Cookies from "./Components/MainSites/Cookies";
+import Credits from "./Components/MainSites/Credits";
 
 const App = () => {
 
@@ -39,11 +43,11 @@ const App = () => {
     ];
 
     const footerNavItems = [
-        { content: 'Impressum', linkTo: '/'},
+        { content: 'Impressum', linkTo: '/impressum'},
         { content: 'Contact' , linkTo: '/'},
-        { content: 'Privacy' , linkTo: '/'},
-        { content: 'Cookies', linkTo: '/' },
-        { content: 'Credits' , linkTo: '/'},
+        { content: 'Privacy' , linkTo: '/privacy'},
+        { content: 'Cookies', linkTo: '/cookies' },
+        { content: 'Credits' , linkTo: '/credits'},
 
     ];
 
@@ -68,7 +72,12 @@ const App = () => {
                         <Route path="/pegs" element={<Pegs />} />
                         <Route path="/vocab" element={<Vocab />} />
 
-                        <Route path="/mnemo-max" element={<MainAppSite/>}/>
+                        <Route path="/mnemo-max" element={<MainMnemoMaxSite/>}/>
+
+                        <Route path="/impressum" element={<Impressum/>}/>
+                        <Route path="/privacy" element={<Privacy/>}/>
+                        <Route path="/cookies" element={<Cookies/>}/>
+                        <Route path="/credits" element={<Credits/>}/>
                     </Routes>
                 </main>
                 <Footer navItems={footerNavItems} />
