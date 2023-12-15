@@ -12,7 +12,8 @@ const RecursiveDropdown = ({ menuData }) => {
         <div className="w-40 relative z-10 inline-block text-center">
             <div
                 className="relative z-10 w-40 text-white p-4 rounded-2xl hover:bg-gradient-to-tr from-cyan-400 to-cyan-800 hover:opacity-70 cursor-pointer"
-                onClick={handleToggleClick}
+                onMouseOver={handleToggleClick}
+                onMouseLeave={handleToggleClick}
             >
                 {menuData.title}
             </div>

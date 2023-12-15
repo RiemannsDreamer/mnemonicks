@@ -1,11 +1,18 @@
-import React, {useState, useEffect, useContext} from "react";
-// import "../../Styles/MainSites/MnemoMax/MnemoClock.css";
+import React, {useEffect, useContext} from "react";
 
-// Import contexts
+
 import {AppState
 } from "../MainSites/MainMenuHeader/MnemoContexts";
-import App from "../../App";
 
+
+/**
+ * Digital Clock for MnemoMax App.
+ * Displays training time during training.
+ * Later used to compute time dependent scores and display results.
+ *
+ * @returns {Element}
+ * @constructor
+ */
 const MnemoClock = () => {
 
     const {appState,setAppState} = useContext(AppState)

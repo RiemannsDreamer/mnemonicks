@@ -1,8 +1,15 @@
-//import Big from "big.js"
+
 import Decimal from "decimal.js";
 
 // Functions for number training
 
+/**
+ * Function serving a batch of numbers already divided into chunks. Used for Training.
+ *
+ * @param amountOfNumbers
+ * @param chunkSize
+ * @returns {*[]}
+ */
 export function getRandomNumbersForTraining(amountOfNumbers, chunkSize) {
     let batch = getBatchOfRandomNumbers(amountOfNumbers)
 

@@ -7,7 +7,11 @@ import Tile from "../../Tile/Tile";
  * Landing page of the website(s).
  * Content, without header and footer.
  * Contains a hierarchical structures of tiles which serve navigation to different topics.
- * will be defined in a JSON file or directory-structure.
+ * will be defined in a JSON file or directory-structure later (design).
+ *
+ * For the subsites in this structure there is no documentation provided.
+ * This is because the design / arch of this content sites is temporary and will be changed later.
+ * There is no real content at the moment.
  *
  * @returns {Element}
  * @constructor

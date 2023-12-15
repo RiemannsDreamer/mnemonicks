@@ -2,8 +2,6 @@
 import React from 'react';
 import Tile from "../../Tile/Tile";
 
-//import "../../Styles/MainSites/Alphabets.css"
-
 import "../../../Styles/MainSites/Grid_home.css"
 
 // TODO: add links to router

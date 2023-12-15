@@ -1,6 +1,6 @@
 
 import React from 'react';
-import Tile from "../../Tile/Tile";
+
 
 import "../../../Styles/MainSites/MindPalace.css"
 

@@ -1,17 +1,22 @@
-import React, {useCallback, useContext, useEffect} from "react";
-// import "../../Styles/MainSites/MnemoMax/MnemoContent.css";
+import React, {useContext} from "react";
 
 
-import {
-    AppState
-} from "../MainSites/MainMenuHeader/MnemoContexts";
+
+import {AppState} from "../MainSites/MainMenuHeader/MnemoContexts";
 
 import MnemoTest from "./MnemoTest";
 import MnemoResult from "./MnemoResult";
 import MnemoTrain from "./MnemoTrain";
-import App from "../../App";
 import MnemoSettings from "./MnemoSettings";
 
+/**
+ * Wrapper component for different content types.
+ * Dynamic rendering due to app State.
+ * Displays the different stages of a training session depending on appState.
+ *
+ * @returns {Element}
+ * @constructor
+ */
 const MnemoContent = () => {
 
     const {appState,setAppState} = useContext(AppState)

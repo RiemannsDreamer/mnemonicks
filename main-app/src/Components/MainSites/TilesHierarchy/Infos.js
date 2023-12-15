@@ -2,8 +2,6 @@
 import React from 'react';
 import Tile from "../../Tile/Tile";
 
-// import "../../App.css"
-//import "../../Styles/MainSites/Infos.css"
 
 import "../../../Styles/MainSites/Grid_home.css"
 

@@ -1,5 +1,15 @@
-import React, { useContext ,useState} from "react";
+import React, {useState} from "react";
 
+
+/**
+ * Simple Button used in other Conmponents.
+ * Will be refactored later and div will be replaced with <button>.
+ *
+ * @param title
+ * @param onClick
+ * @returns {Element}
+ * @constructor
+ */
 const MnemoButton = ({ title, onClick }) => {
 
    let [isClicked, setIsClicked] = useState(false);

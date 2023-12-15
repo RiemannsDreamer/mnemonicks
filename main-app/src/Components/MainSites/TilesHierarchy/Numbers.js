@@ -2,7 +2,6 @@
 import React from 'react';
 import Tile from "../../Tile/Tile";
 
-//import "../../Styles/MainSites/Numbers.css"
 import "../../../Styles/MainSites/Grid_home.css"
 
 const Numbers = () => {

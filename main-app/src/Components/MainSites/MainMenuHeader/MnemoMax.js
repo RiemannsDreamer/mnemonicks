@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useRef} from "react";
+import React, {useState} from "react";
 import MnemoMenu from "../../MnemoMaxTrainer/MnemoMenu";
 import MnemoProgressBar from "../../MnemoMaxTrainer/MnemoProgressBar";
 import MnemoClock from "../../MnemoMaxTrainer/MnemoClock";
@@ -36,15 +36,13 @@ export default function MnemoMax() {
         trainingStatus: "Settings",
 
         clockCountSeconds: 0,
-        actualStartTime: 0,
 
-        batchSize: 10,
-        chunkSize: 2,
+        batchSize: 42,
+        chunkSize: 4,
         actualChunkIndex: 0,
 
         actualBatch: [],
         resultBatch: [],
-
     })
 
     return (
