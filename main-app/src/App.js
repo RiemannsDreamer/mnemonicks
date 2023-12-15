@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Header from './Components/Common/Header';
 import Footer from './Components/Common/Footer';
-import Tile from './Components/Tile/Tile';
+
 
 import Home from './Components/MainSites/MainMenuHeader/Home';
 import Infos from './Components/MainSites/TilesHierarchy/Infos';
@@ -24,12 +24,20 @@ import Pegs from "./Components/MainSites/TilesHierarchy/Pegs";
 import Vocab from "./Components/MainSites/TilesHierarchy/Vocab";
 import Impressum from "./Components/MainSites/Footer/Impressum";
 
-// import MnemoMax from "./Components/MainSites/MainMenuHeader/MnemoMax";
 import MainMnemoMaxSite from "./Components/MainSites/MainMenuHeader/MainMnemoMaxSite"
 import Privacy from "./Components/MainSites/Footer/Privacy";
 import Cookies from "./Components/MainSites/Footer/Cookies";
 import Credits from "./Components/MainSites/Footer/Credits";
 
+/**
+ * Main app component. react arch...
+ * Holds only header / footer site structure...
+ * And React-Router-Dom links definitions.
+ * Routes to home on content root and therefore serves the landing page.
+ *
+ * @returns {Element}
+ * @constructor
+ */
 const App = () => {
 
     const headerNavItems = [

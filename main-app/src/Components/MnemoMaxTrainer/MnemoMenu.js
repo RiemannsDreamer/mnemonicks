@@ -3,7 +3,9 @@ import React, { useState } from "react";
 import RecursiveDropdown from "./RecursiveDropdown";
 
 /**
- *
+ * Menu in the MnemoMax app.
+ * The user can choose different trainings / training types here.
+ * Later used for state management and rendering different training contents.
  *
  * @param menuData
  * @returns {Element}

@@ -1,5 +1,14 @@
 import React, { useState } from "react";
 
+
+/**
+ * Component for the dropdown menus in MenmoMax.
+ * Workaround. Will be altered later. Not really used at the moment.
+ *
+ * @param menuData
+ * @returns {Element}
+ * @constructor
+ */
 const RecursiveDropdown = ({ menuData }) => {
 
     const [isOpen, setIsOpen] = useState(false);

@@ -1,10 +1,20 @@
-//import "../../Styles/Tile.css"
-
 
 import React from 'react';
 import {Link} from 'react-router-dom';
 
 
+/**
+ * Main Tile Component to display the website Structure (Content / Infos).
+ * Used to render a hierarchical structures of such tiles wich are uses to navigate over content sites.
+ *
+ *
+ * @param title
+ * @param subtitle
+ * @param cornerImageUrl
+ * @param linkTo
+ * @returns {Element}
+ * @constructor
+ */
 const Tile = ({title, subtitle, cornerImageUrl, linkTo}) => {
     return (
         <Link to={linkTo} className={""}>

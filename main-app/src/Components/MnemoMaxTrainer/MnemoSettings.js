@@ -3,7 +3,15 @@ import App from "../../App";
 import {AppState} from "../MainSites/MainMenuHeader/MnemoContexts";
 import MnemoButton from "./MnemoButton";
 
-
+/**
+ * Landing component for the content box.
+ * Contains the initial Settings for a training.
+ * At the moment only Numbers are provided.
+ * Choose batchSize and chunkSize here.
+ *
+ * @returns {Element}
+ * @constructor
+ */
 const MnemoSettings = () => {
 
 

@@ -1,13 +1,18 @@
 import React, {useContext, useEffect, useState} from "react";
-import {
-AppState
-
-} from "../MainSites/MainMenuHeader/MnemoContexts";
+import {AppState} from "../MainSites/MainMenuHeader/MnemoContexts";
 
 
-
-
-
+/**
+ * Training content, used to train numbers at the moment.
+ * When the app is in trainingStatus=Train, this component is displayed.
+ * The single chunks are provided here to learn.
+ * The user can use "previous" and "next" buttons to navigate forwards and backwards through the batch.
+ * When the batch is finished, "END" is displayed. This is a chunk contained in the actualBatch array. (Workaround...)
+ * //TODO: Should not mix batch content with strings / "END".
+ *
+ * @returns {Element}
+ * @constructor
+ */
 const MnemoTrain = () => {
 
     const {appState,setAppState} = useContext(AppState)
